@@ -1,6 +1,6 @@
 Git:
 1. Terminal --> "Git init" inicializa git en un proyecto
-2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add." , y tenes el cambio temporal hasta que hagas el commit
+2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el commit
 3. Terminal --> Queres terminar y guardar el cambio como te pinte, vas, pones "git commit -m "nombre de la version" ", y asi creas otra version.
 4. Terminal --> Queres ver una version antigua que ya cambiaste, pones "git log" para ver las versiones guardadas Y
 despues "git checkout "numero de la version que aparece" para cargar la version que quieras (esto saca todo lo que tengas en el momento, asi que tenes que hacer un commit
