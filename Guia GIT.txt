@@ -1,6 +1,9 @@
 Git:
+Iniciar GIT y basico:
+
 1. Terminal --> "Git init" inicializa git en un proyecto
-2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el commit
+2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el commit, podemos fijarnos el estado de los cambios que hacemos 
+con el comando "git status".
 3. Terminal --> Queres terminar y guardar el cambio como te pinte, vas, pones "git commit -m "nombre de la version" ", y asi creas otra version.
 4. Terminal --> Queres ver una version antigua que ya cambiaste, pones "git log" para ver las versiones guardadas Y
 despues "git checkout "numero de la version que aparece" para cargar la version que quieras (esto saca todo lo que tengas en el momento, asi que tenes que hacer un commit
@@ -15,3 +18,12 @@ los cambios que guardes no van a afectar al master, y funca igual que la princip
 3. Terminal --> Paso opcional, te gusto el cambio que hiciste en la rama, tenes que actualizarlo al master, lo primero que haces es volver al master con "git checkout master" y 
 aca pones "git merge NOMBRE DE RAMA", esta accion fusiona la version en la que estes en el momento con la rama que elijas.
 4. Terminal --> Si queres borrar alguna rama porque la vida, usas el comando "git branch -D NOMBRE DE RAMA", lo cual la elimina.
+
+Reglas basicas Versiones:
+0.0.X --> Arreglos o cambios minimos.
+0.X.0 --> Cambios de interfaz o pagina pero sigue siendo retrocompatible
+X.0.0 --> Cambios grandes que no permiten retrocompatibilidad del todo y por ahi.
+
+Tagging: Metodo en el cual le pones una version a cada linea temporal guardada, preferentemente ponele al inicio del proyeto
+1. Terminal --> "git tag v0.0.0 (ahi va el numero de la version que queres) -m "mensaje"".
+2. Terminal --> Podes hacer eso con cada version nueva que guardes, y para ver las que tenes pones "git show v0.0.0(nr version)" y te muestra los datos de esa.
