@@ -1,11 +1,16 @@
 /* */
 
+* {
+  background: url(./img/fonditolindo.jpg) no-repeat center center;
+  background-attachment:scroll;
+  background-size:contain;
+}
 
 p {
     color: red;
     text-align: center;
   }
-  header {
+   /*header {
     padding:75px;
     text-decoration:underline;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +20,7 @@ p {
    /* Todo lo que esta abajo es pa dejar una imagen bien de fondo manualmente paso a paso, sino podes usar el atajo "backgroung: background-color background-image background-repeat 
    background-attachment background-position" en ese orden, no tenes que poner el nombre, solo tenes que aclarar el valor que queres en cada uno*/
 
-    /*background-color: rgb(146, 60, 185);
+    background-color: rgb(146, 60, 185);
     background-image: url(./img/1.jpg);
     background-repeat: no-repeat;
     background-position: center;*/
@@ -24,4 +29,5 @@ p {
     background-attachment:fixed;
     background-size:contain;
     height: 400px;
-  }
+   } 
+
