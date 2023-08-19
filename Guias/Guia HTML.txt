@@ -1,1 +1,34 @@
-Despues empezamo aca
+<!DOCTYPE html>
+     <html lang="es">
+        <head>
+         <script src="https://kit.fontawesome.com/f1c41f8039.js" crossorigin="anonymous"></script>
+             <link rel="stylesheet" type="text/css" href="Visualitos.css">
+             <meta charset="utf-8">
+
+            <title>
+                Titulo ventana
+            </title>
+
+                <header>Titulo pagina</header>
+
+        </head>
+        <body>
+            <header> encabezado de un documento o sección.
+
+            <nav> define un conjunto de enlaces de
+            navegación.
+            <main> representa al contenido principal dentro
+            del body.
+
+            <section> define secciones de un documento.
+
+            <article> marca contenido independiente ej: un
+            mensaje en un foro, comentarios, etc.
+
+            <aside> se suele usar para colocar información
+            adicional ej: publicidad.
+
+            <footer> pie de página, suele contener información
+            de contacto, mapa del sitio
+        </body>
+
