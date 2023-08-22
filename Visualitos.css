@@ -1,9 +1,16 @@
 /* */
 
+html {
+  background-image: url(./img/patrones2.jpg);
+  background-repeat:;
+  background: 
+}
+
 
 p {
     color: red;
     text-align: center;
+    font-size: 4em;
   }
   header {
     padding:75px;
@@ -23,5 +30,5 @@ p {
     background: rgb(146, 60, 185) url(./img/1.jpg) no-repeat center center;
     background-attachment:fixed;
     background-size:contain;
-    height: 400px;
+    height: 200px;
   }
