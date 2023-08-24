@@ -43,3 +43,10 @@ figure{
   top: 90px;
   right: 50px;
 }
+a:link{
+  background-color: aqua;
+}
+
+a:hover{
+  font-size: 40px;
+}
