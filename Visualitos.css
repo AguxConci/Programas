@@ -4,18 +4,24 @@ html {
   background-image: url(./img/patrones2.jpg);
   background-repeat:;
   background: 
-}
-
-
-p {
+  }
+#Aloja {
+  background-color: antiquewhite;
+    border: solid 15px;#
+    border-radius: 300px 5px ;
     color: red;
     text-align: center;
     font-size: 4em;
   }
-  header {
+header p{
+    overflow: visible;
+    border: 20px skyblue;
+    font-style: oblique;
+    font-size: 4em;
+    font-variant-position: normal;
     padding:75px;
     text-decoration:underline;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
     font-style: oblique;
     font-variant: small-caps;
 
@@ -32,3 +38,8 @@ p {
     background-size:contain;
     height: 200px;
   }
+figure{
+  position:absolute;
+  top: 90px;
+  right: 50px;
+}

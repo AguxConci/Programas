@@ -1,6 +1,7 @@
 Git:
 Iniciar GIT y basico:
-
+0.5. Terminal --> Para moverte entre carpetas pones "ls", muestra la lista de archivos en la carpeta, sino tas en la que queres, te moves con 
+cd "nombre carpeta" y pa salir cd ..
 1. Terminal --> "Git init" inicializa git en un proyecto
 2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el commit, podemos fijarnos el estado de los cambios que hacemos 
 con el comando "git status".
@@ -27,3 +28,7 @@ X.0.0 --> Cambios grandes que no permiten retrocompatibilidad del todo y por ahi
 Tagging: Metodo en el cual le pones una version a cada linea temporal guardada, preferentemente ponele al inicio del proyeto
 1. Terminal --> "git tag v0.0.0 (ahi va el numero de la version que queres) -m "mensaje"".
 2. Terminal --> Podes hacer eso con cada version nueva que guardes, y para ver las que tenes pones "git show v0.0.0(nr version)" y te muestra los datos de esa.
+
+GitHub: 
+Repositorio y Push
+1. Terminal --> 
