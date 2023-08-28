@@ -1,33 +1,57 @@
 /* */
 
-* {
-  background: url(./img/fonditolindo.jpg) no-repeat center center;
-  background-attachment:scroll;
-  background-size:contain;
-}
-
-p {
+html {
+  background-image: url(./img/patrones2.jpg);
+   
+  }
+/*  
+#Aloja {
+  background-color: antiquewhite;
+    border: solid 15px;#
+    border-radius: 300px 5px ;
     color: red;
     text-align: center;
+    font-size: 4em;
   }
-   /*header {
+header p{
+    overflow: visible;
+    border: 20px skyblue;
+    font-style: oblique;
+    font-size: 4em;
+    font-variant-position: normal;
     padding:75px;
     text-decoration:underline;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
     font-style: oblique;
     font-variant: small-caps;
 
    /* Todo lo que esta abajo es pa dejar una imagen bien de fondo manualmente paso a paso, sino podes usar el atajo "backgroung: background-color background-image background-repeat 
    background-attachment background-position" en ese orden, no tenes que poner el nombre, solo tenes que aclarar el valor que queres en cada uno*/
 
-    background-color: rgb(146, 60, 185);
+    /*background-color: rgb(146, 60, 185);
     background-image: url(./img/1.jpg);
     background-repeat: no-repeat;
-    background-position: center;*/
+    background-position: center;
 
     background: rgb(146, 60, 185) url(./img/1.jpg) no-repeat center center;
     background-attachment:fixed;
     background-size:contain;
-    height: 400px;
-   } 
-
+       height: 200px;
+  }
+figure{
+  position:absolute;
+  top: 90px;
+  right: 50px;
+}
+a:link{
+  background-color: aqua;
+}
+#Rey{
+ background-color: orange;
+ width: 50px;
+ height: 50px;
+ transition: width 3s ease;
+}
+#Rey:hover{
+  width: 100px;
+} */
