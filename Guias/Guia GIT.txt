@@ -1,34 +1,52 @@
 Git:
-Iniciar GIT y basico:
-0.5. Terminal --> Para moverte entre carpetas pones "ls", muestra la lista de archivos en la carpeta, sino tas en la que queres, te moves con 
+Iniciar GIT y basico:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0.5. Terminal --> Para moverte entre carpetas pones "ls", muestra la lista de archivos en la carpeta, sino tas en la que
+ queres, te moves con 
 cd "nombre carpeta" y pa salir cd ..
 1. Terminal --> "Git init" inicializa git en un proyecto
-2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el commit, podemos fijarnos el estado de los cambios que hacemos 
+2. Terminal --> Laburo y si quiero registrar un cambio pongo "git add ." , y tenes el cambio temporal hasta que hagas el 
+commit, podemos fijarnos el estado de los cambios que hacemos 
 con el comando "git status".
-3. Terminal --> Queres terminar y guardar el cambio como te pinte, vas, pones "git commit -m "nombre de la version" ", y asi creas otra version.
+3. Terminal --> Queres terminar y guardar el cambio como te pinte, vas, pones "git commit -m "nombre de la version" ", y 
+asi creas otra version.
 4. Terminal --> Queres ver una version antigua que ya cambiaste, pones "git log" para ver las versiones guardadas Y
-despues "git checkout "numero de la version que aparece" para cargar la version que quieras (esto saca todo lo que tengas en el momento, asi que tenes que hacer un commit
+despues "git checkout "numero de la version que aparece" para cargar la version que quieras (esto saca todo lo que tengas
+ en el momento, asi que tenes que hacer un commit
 para guardar eso, y lo ultimo que guardes se llama master, para volver ahi, usas "git checkout master")
 
-Ramas: Sirven para que cada programador pueda trabajar en el proyecto en simultaneo sin afectar a los demas o probar cosas, porque crea una version de la pagina extra para trabajar,
+Ramas:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sirven para que cada programador pueda trabajar en el proyecto en simultaneo sin afectar a los demas o probar 
+cosas, porque crea una version de la pagina extra para trabajar,
 donde podes guardar los cambios que quieras intentar y ver el resultado sin afectar a la rama principal.
 
 1. Terminal --> "git branch NOMBRE DE RAMA", asi creas una rama
-2. Terminal --> Para navegar entre las versiones de las ramas, uso "git checkout NOMBRE DE RAMA", este comando te lleva a la rama, ya fuera del master que es la ultima version, y donde
+2. Terminal --> Para navegar entre las versiones de las ramas, uso "git checkout NOMBRE DE RAMA", este comando te lleva a
+ la rama, ya fuera del master que es la ultima version, y donde
 los cambios que guardes no van a afectar al master, y funca igual que la principal, git add . , git commit -m ...., y asi.
-3. Terminal --> Paso opcional, te gusto el cambio que hiciste en la rama, tenes que actualizarlo al master, lo primero que haces es volver al master con "git checkout master" y 
+3. Terminal --> Paso opcional, te gusto el cambio que hiciste en la rama, tenes que actualizarlo al master, lo primero que 
+haces es volver al master con "git checkout master" y 
 aca pones "git merge NOMBRE DE RAMA", esta accion fusiona la version en la que estes en el momento con la rama que elijas.
 4. Terminal --> Si queres borrar alguna rama porque la vida, usas el comando "git branch -D NOMBRE DE RAMA", lo cual la elimina.
 
-Reglas basicas Versiones:
+Reglas basicas Versiones:----------------------------------------------------------------------------------------------------------------------------------
 0.0.X --> Arreglos o cambios minimos.
 0.X.0 --> Cambios de interfaz o pagina pero sigue siendo retrocompatible
 X.0.0 --> Cambios grandes que no permiten retrocompatibilidad del todo y por ahi.
 
 Tagging: Metodo en el cual le pones una version a cada linea temporal guardada, preferentemente ponele al inicio del proyeto
 1. Terminal --> "git tag v0.0.0 (ahi va el numero de la version que queres) -m "mensaje"".
-2. Terminal --> Podes hacer eso con cada version nueva que guardes, y para ver las que tenes pones "git show v0.0.0(nr version)" y te muestra los datos de esa.
+2. Terminal --> Podes hacer eso con cada version nueva que guardes, y para ver las que tenes
+ pones "git show v0.0.0(nr version)" y te muestra los datos de esa.
 
-GitHub: 
+GitHub: --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Repositorio y Push
-1. Terminal --> 
+1. Terminal --> Tenemos que linkear el proyecto con el repositorio de GitHub, pa eso vamos al repositorio que supongo ya creamos, vamos
+a la parte que dice "push an existing repository from the command line", copiamos el link, y en la Terminal git bash copiamos y pegamos ese mismo link,
+podes checkear que esto esta bien si escribir "git remote -v", si aparecen el repositorio local y el remoto (fetch), tonces ta bien.
+2. Terminal --> Pa subir el trabajo actual, la rama que sea en la que estes trabajando, pones "git push origin "NombreRama", origin es 
+la rama origen que va a crear github en el repositorio, despues en este paso te pide que te registres con tu cuenta de GitHub, le mandas y fue.
+
+Pull
+3. Terminal --> Pa bajar contenido del repositorio sobre tu rama local, si hay cambios que queres actualizar online, usas el comando siguiente 
+"git pull origin "NombreDeRama"" y asi, te actualiza el trabajo actual con lo que tengas online..
+
