@@ -4,6 +4,10 @@
          <script src="https://kit.fontawesome.com/f1c41f8039.js" crossorigin="anonymous"></script>
              <link rel="stylesheet" type="text/css" href="Visualitos.css">
              <meta charset="utf-8">
+	     <meta name="description" content="Descripcion"/>
+	     <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/> (pa que aparezcas en el algoritmo con palabras)
+             <meta name="author" content="Nombre del autor" />
+	     <meta name="copyright" content="Propietario del copyright" />
 
             <title>
                 Titulo ventana
@@ -31,4 +35,61 @@
             <footer> pie de página, suele contener información
             de contacto, mapa del sitio
         </body>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	<form method="post" action="_self"> -->Esto inicia el formulario.
+Atributos de form 	method		Solo usa post
+			action		Specifies where to send the form-data (url)  when a form is submitted
+Atributos de input:
+	Importante-->	Name		Forma de reconocerlo pa el proceso de datos
+			Maxlength  	Maximo capacidad
+			autocomplete	Specifies whether a form should have autocomplete on or off
+	Importante-->	Placeholder	Lo que se muestra en el campo sin tener que borrar nada
+			Value		Lo que se muestra en el campo
+			Multilple	deja que metas muchos archivos
+	Importante-->	title		Le pones el mouse encima *esperas* aparece esto
+	Importante-->	required	OBLIGATORIO
+			autofocus	Hace que ya tengas un campo marcado cuando te metes
+			
+			
+		
+	Importante-->	<label> Para linkear el ID de un <input> con el "for" de label y Para poner nombre. Se usa id="" para eso, y para llamarlo
+
+		<select> 		listas desplegables
+Importante-->	<input type="text" >	Displays a single-line text input field
+Importante-->	<input type="password"> Displays a single-line text input field censurado
+		<input type="radio">	Displays a radio button (for selecting one of many choices)
+Importante-->	<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+Importante-->	<input type="submit" onclick="alert('Gracias!')>	Displays a submit button (for submitting the form)
+		<input type="button">	Displays a clickable button
+		<input type="email">
+		<input type="Numbre", min="0", max="10">
+		<input type="date">
+		<input type="file">
+		<input type="color">
+		<input type="button">
+		<input type="checkbox">
+		<input type="color">
+		<input type="date">
+		<input type="datetime-local">
+		<input type="email">
+		<input type="file">
+		<input type="hidden">
+		<input type="image"> define an image as a summit button
+		<input type="month">
+		<input type="number">
+		<input type="radio">
+		<input type="range">
+		<input type="reset">
+		<input type="search">
+		<input type="tel">
+		<input type="text">
+		<input type="time">
+		<input type="url">
+		<input type="week">
+		Atributos--> Value 
+	<form/>
+
+
 
