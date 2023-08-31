@@ -1,5 +1,5 @@
 Git:
-Iniciar GIT y basico:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iniciar GIT y básico:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0.5. Terminal --> Para moverte entre carpetas pones "ls", muestra la lista de archivos en la carpeta, sino tas en la que
  queres, te moves con 
 cd "nombre carpeta" y pa salir cd ..
@@ -49,4 +49,3 @@ la rama origen que va a crear github en el repositorio, despues en este paso te 
 Pull
 3. Terminal --> Pa bajar contenido del repositorio sobre tu rama local, si hay cambios que queres actualizar online, usas el comando siguiente 
 "git pull origin "NombreDeRama"" y asi, te actualiza el trabajo actual con lo que tengas online..
-

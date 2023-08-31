@@ -1,0 +1,46 @@
+Flexbox: Bien hecho, es posicionamiento de forma automatica 
+
+Pagina pa probar con flex: FLEX FROGGY Y FLEX FROGGY
+
+Para manejar cada elemento del flex, le metes los datos que queres con una class
+es un sistema de elementos que usa mecánica mas potente limpia y flexible en la que los elementos de html se adaptan y fluyen automáticamente
+a diferencia de display que movía cosas de forma particular, el flex usa un sistema doble, le da al elemento padre la capacidad de convertirse en un 
+contenedor flex, y hacer que los hijos hereden características del padre, posiciones etc.
+
+Ejes: utiliza ejes cartesianos X,Y, columnas y filas. Dependiendo de como este establecido el comportamiento del flex, cambia que parte son sus ejes.
+
+Si quiero que alguna parte de mi css se comporte como flex, tengo que declararlo en sus atributos como "display: flex;" 
+
+Atributo: flex direction valores", tan row que es en linea, row reverse, column y column reverse.
+Atributo: wrap atributo que permite que pasen o no de la linea actual en la que esta el Flexbox
+shorthand Atributo: : flex: flow row wrap;
+
+Gap: espacio desde los bordes
+Orden:cambiar el orden de los elementos, se le aplica al hijo. (googlealo por dudas)
+
+Atributo: Flex grow:de que manera proporcionalmente se van a comportar los elementos cuando tienen espacio adicional disponible para los hijos, es una
+propiedad y su valor es un numero entero que indica a cuanto corresponde.
+
+Atributo: Flex shrink:Funciona como grow, pero al revés, es cual se va achicar antes  como.
+
+Atributo: Flex basis Mas cambios dependiendo de lo que pase con el tamaño de pantalla, very responsive.
+
+Atributo: flex es la propiedad que mete las 3 anteriores juntas
+
+Alineaciones: Son la magia de Flexbox, si estarías o moves de alguna forma que cambie el ancho, podes elegir como se mueve.
+
+Atributo: justify-content como se mueven los elementos de flexbox en eje X.
+Atributo: align-items como se mueven los elementos de flexbox en eje y.
+
+Grid,Evolución del flex: 
+
+
+
+
+
+
+
+
+
+
+

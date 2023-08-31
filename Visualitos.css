@@ -4,6 +4,36 @@ html {
   background-image: url(./img/patrones2.jpg);
    
   }
+
+.flex {
+  background-color: skyblue;
+  display: flex;
+  border-radius: 30px 5px;
+  flex-flow: row wrap;
+  /* flex-direction: row; 
+  flex-wrap: wrap; /*Esto permite que los flex ocupen otra linea*/
+  gap: 10px 10px;
+  justify-content: space-around;
+  align-items: end;
+  
+}
+.flex-item-10 {
+  background-color: red;
+  margin: 10px; /*margin es el espacio entre bloques*/
+  padding: 20px;
+  text-align: center;
+  width: 300px; 
+  /* flex-grow: 2;*/
+  
+}
+.flex > div {
+  background-color: red;
+  margin: 10px; /*margin es el espacio entre bloques*/
+  padding: 20px;
+  text-align: center;
+  width: 30px; /* Automáticamente les baja el tamaño a los div para que entren bien en la pantalla*/
+
+}
 /*  
 #Aloja {
   background-color: antiquewhite;
