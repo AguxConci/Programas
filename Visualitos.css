@@ -34,6 +34,50 @@ html {
   width: 30px; /* Automáticamente les baja el tamaño a los div para que entren bien en la pantalla*/
 
 }
+.grid {
+ display: grid;
+ background-color: violet;
+ height: 600px; /*tamaño grilla*/
+      /* grid-template-columns: 1fr 2fr 3fr;
+      grid-template-rows: 100px 100px 100px;*/
+ grid-template-columns: 2fr 3fr 4fr 1fr;
+ grid-template-rows: 2fr 2fr 3fr 3fr;
+ gap: 40px;
+ grid-column-start: ;
+
+ 
+
+
+  
+  
+}
+
+.grid1 {
+  grid-column: 1 / 3 ;
+  grid-row: 2 / span 3 ;
+}
+
+.grid > div{
+  background-color: red;
+  margin: 10px; /*margin es el espacio entre bloques*/
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.gridNuevo {
+  display: grid;
+  grid-template-areas:
+  "Inicio Inicio Inicio Inicio"
+  "Medio Medio MedioFeo MedioFeo"
+  "Casi Casi Casi Casi"
+  "Pie Pie Pie Pie" ;
+}
+.grid-Inicio{
+  background-color: blue;
+  height: 50px;
+  grid-area: Inicio;
+}
 /*  
 #Aloja {
   background-color: antiquewhite;

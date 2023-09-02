@@ -32,7 +32,93 @@ Alineaciones: Son la magia de Flexbox, si estarías o moves de alguna forma que 
 Atributo: justify-content como se mueven los elementos de flexbox en eje X.
 Atributo: align-items como se mueven los elementos de flexbox en eje y.
 
-Grid,Evolución del flex: 
+----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------     ------------------------------------
+
+
+https://css-tricks.com/   <---- PAGINA GUIA PA GRID
+
+Grid,Evolución del flex: (sistema de grillas) 
+A diferencia de flex, donde posicionamos todo en una dimension, grid tiene la posibilidad de hacerlo en horizontal y vertical al mismo tiempo,
+2 dimensiones, toma las ventajas de flex para usar un sistema mas potente que nos permite usar grillas o cuadriculas de manera sencilla.
+
+Utilidad 2 dimensiones, nos permite trabajar en filas y columnas, una tabla, y podemos calcular anchos y altos, diferencias, personalización
+de cada elemento hijo, y todo como en flex que se transforma como queres.
+Ejes, son ejes fijos, el main axis es el eje x, y el cross axis, el Y.
+
+Para comenzar, declaramos el contenedor padre, con un display grid, y despues declaramos la cantidad de filas y columnas:
+
+Propiedades, tiene 2 componentes, el contenedor y los items, y pa empezar a hacer un grid
+1. Display: grid; al bloque con el que tenga esa class.
+2. Grid-template-columns y grid-template-rows, asi declaras en pixeles la cantidad de columnas y filas, ej( 100px 300px 200px) eso son 3 o columnas 
+o filas, le pones la medida de la columna o fila, y tenes 3 de esas, la primera con ancho 100, segunda 300, tercera 200. Si declaro digamos, 3 columnas
+y tengo mas elementos que pasan las 3 columnas, la ultima columna con los elementos que sobran, van a estar con el minimo tamaño que pueden estar.
+3.fractions: Fr (fraction) es una unidad que divide el espacio disponible entre la cantidad de fr declarados y los reparte proporcionalmente, agarra
+la dimension que necesita, agarra el ancho total y lo divide entre la cantidad de columnas o filas que tenga basado en fr, ejemplo (1fr 2fr 1fr),
+van a ser filas o columnas, donde la primera y la ultima van a ser la mitad de ancha o larga que la del medio, porque esa vale 2fr. Mantiene la 
+proporcionalidad entre ellos, siempre el primer elemento va a ser 1fr, por tanto, la mitad de 2f, y asi, y ocupa todo el ancho o alto disponible,
+en vez de calcularlo manualmente, se adapta.
+
+4. Repeat: si tenemos una plantilla con muchas filas y columnas del mismo tamaño, podemos usar repeat(cantidad,tamaño); para aclarar cuantas columnas
+o filas queres que se tomen, y en tamaño, como queres que sean.
+
+5. Gap funciona como en flexblox, espacio entre bloques del grid o flexblox.
+
+Grid por valores: Podes decirle a grid que:
+1. Grid-column-start y decis dodne queres que empiece la columna (la primer columna se dibuja entre la linea 1 y 2, la segunda 2 y 3,etc.)
+grid-column.start: "donde quiero que empiece(valor numerico);
+
+2. Grid-column-start y decis donde queres que termine la columna (la primer fila se dibuja entre la linea 1 y 2, la segunda 2 y 3,etc.)
+grid-column.start: donde quiero que termine(tambien numerico)
+1 y 2. Si decis grid-row/column (la barra es o uno o el otro, no ambos), pones gri etc: valor / valor;
+
+3. Span: Extendete o "utiliza x columnas", me expando a X columnas/filas, si le digo en cual empieza, span le dice cuanto se extiende.
+ Es parte de lo de arriba grid star y end.
+
+4. shorthand: grid-area, le decis 4 unidades, primera: fila donde empieza, segunda  : columna donde empieza, tercera: fila donde termina, cuarta:
+columna donde termina.
+ej: grid-area: 1 / 2 / 2 span / span 3. row-star/col-start/row-end/col-end.
+
+Areas: Maquetado moderno
+1. Necesita que definas el grid area, y donde lo vas a utilizar:
+.grid-container{
+    display: grid;
+    row, col...
+    grid-template-areas:
+    "navbar navbar"
+    "main sidebar"
+    "footer footer"   básicamente le dijiste al grid que se divida en esos nombres que pongas. Cada parte tiene un nombre para referirse, se 
+                      repiten los nombres dependiendo de cuantas filas hayas usado, este ejemplo tiene 3 filas y 2 columnas, pongo navbar
+                       2 veces porque quiero que ocupe 2 columnas, si lo pongo 1 vez, queda el espacio de arriba a la izquierda sin nombre.
+                       Es una cuadricula y le pones nombre en especifico a cada parte uno por uno.
+}
+2. Después de definirlos, podemos estar en css y editar cada uno de los elementos escribiendo:
+
+header {
+    grid-area: navbar;
+}
+
+elijo mi contenedor, defino las areas que va a tener y después voy a los selectores y le digo que a cada elemento haga tal cosa.
+Grid area es la mejor forma de usar grid, si te pinta hacer un CSS, aprende a usarlo, es moderno.
+
+Alineaciones: 
+Alineación de items:
+Son como en flex, muestra como se alinean los items:
+justify-items: elegís como queres que se desplacen los items dentro de cada grid, si a la izquierda, derecha, medio, etc.
+align-items: elegís como queres que se desplacen los items en los grid en forma vertical.
+Place-items: shorthand de justify y align, ambos al mismo tiempo con un solo valor.
+
+Alineación de contenido: 
+Los bloques enteros:
+place-content: valores....; 
+
+Self: mover item dentro de su grid pero solo a uno, no mueve todos los items, mueve solo al elegido:
+places-self, align-self, y asi con self.
+
+
+
+
+
 
 
 
