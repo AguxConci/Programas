@@ -1,3 +1,16 @@
+Quiero indicarle otras props a un hijo: Ponemos las props que queremos que tenga todo el padre, y para aclarar uno mas, usamos & y la etiqueta:
+nav {
+    background bla bla bla;
+    --------------
+    ---------
+    & p {
+        background:-----
+        -----
+    }
+
+} y asi funca.
+
+
 Flexbox: Bien hecho, es posicionamiento de forma automatica 
 
 Pagina pa probar con flex: FLEX FROGGY Y FLEX FROGGY
@@ -114,6 +127,53 @@ place-content: valores....;
 
 Self: mover item dentro de su grid pero solo a uno, no mueve todos los items, mueve solo al elegido:
 places-self, align-self, y asi con self.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Diseño Responsive: Diseño que se adapta al dispositivo mostrado. 
+
+Etiqueta Meta: Viweport, ajusta el tamaño de la pagina web pa que se ajuste a múltiples pantallas NUNCA FIJES VALORES ABSOLUTOS para 
+las paginas, el viewport arregla todo lo relativo, lo fijo se mantiene y es choto.
+
+Diseño moderno: Mobile First, se piensa en los diseños teniendo en cuenta los tamaños de celulares para ir adaptándolo a los estilos
+del sitio y despues se piensa en la pagina web. 
+
+Diferencia clave entre Responsive y Adaptive: El responsive cuando cambie de tamaño y pantallas, va a moverse de forma fluida, se va moviendo
+con la pantalla, ej: si la pantalla se hace mas chica, la pagina va a seguir frame a frame los bordes de la pantalla y va a estar todo el tiempo
+visualmente bien. El adaptativo tiene cambios marcados, si haces mas chica la pantalla, va a esperar a que termine el cambio, va a seguir viendose 
+igual hasta que llegues a la nueva pantalla, y ahi se ajusta de golpe, se ve mas clunky.
+
+El uso de unidades relativas como porcentajes, rem, em, vw (viewing witdh, %) y vh (viewing height, %), sirven como proporciones dinamicas, y
+ asi evitamos estructuras rigidas. Al mismo tiempo se aconseja el uso de los atributos "max/min-width", para pantallas super largas, que en estos casos, si tenemos
+estructuras relativas hasta el final, puede desconfigurar todo, ej, un parrafo, si es una pantalla muy larga, quizas lo que serian
+2 renglones queda en un solo renglon muy largo y es feo.
+
+Aplicar responsive: Se usa mucho flexbox y grid, y tambien el uso de "media queries" Y breakpoints predefinidos para establecer que
+debe hacer nuestro diseño cuando se esta deformando.
+
+Estos son bloques de codigo condicional, donde se escribe css que se use solo
+si se cumple la condicion/regla. ej: 
+-Palabra clave @media, 
+-Screen es el "medio" donde se aplica (estan screen, para monitores, print,
+para documentos de medios impresos o pantallas de previsualizacion, speech, para no videntes, y queda all, el que se utiliza por
+defecto), 
+-and
+-(La condicion entre parentesis), pueden ser max/min-width o height, landscape, portrait, device-witdh, etc.
+-Abris llave para el bloque de media querie, y despues podes hacer lo que quieras ahi de css, es un bloque que solo se va activar
+en caso de que la condicion suceda:
+
+@media screen and (min-witdh: 900px) and (max-width: 1024px) {
+  div {
+    background-color: aqua;
+  }
+}
+
+Se pueden poner muchas media-querie a un mismo elemento, y a cada una la condicion que pinte.
+
+
+
+
+
 
 
 

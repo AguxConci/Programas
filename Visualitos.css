@@ -4,6 +4,12 @@ html {
   background-image: url(./img/patrones2.jpg);
    
   }
+/*
+@media screen and (min-witdh: 900px) {
+  div {
+    background-color: aqua;
+  }
+}*/
 
 .flex {
   background-color: skyblue;
