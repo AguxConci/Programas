@@ -1,0 +1,63 @@
+Primero veamos que es un framework:
+
+Herramientas, librerias, convenciones, buenas practicas que pretenden encapsular las tareas repetitivas en modulos
+genericos, basicamente nos hace las cosas mas faciles.
+
+Bootstrap es un codigo ya definido por alguien y notros usamos directamente, son conjuntos de estilos que podemos usar de 
+una, como Bootstrap, tailwind, materialize, bulma, w3dschool..... etc.
+
+Es una serie de estilos ya preparados como botones, tarjetas, navbars, etc. ademas posee clases para crear columnas con grid, 
+lo cual lo hace comodo para es, facilmente, cuyo objetivo es permitir la construccion de sitios web responsive.
+
+Hay que instalar Bootstrap
+
+CDN: servidor al que le pido la info, etiqueta link para los estilos y script para las funcionalidades.
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+
+(Hay componentes dentro de bootstrap que necesitan javascript, léelo en su pagina) link va al principio y script al final.
+
+En el html pegamos esas cosas, como con css. 
+
+Lo que tiene la conexión de cdn es que si el servidor de bootstrap esta caído, no funca.
+
+Descarga de archivos compilados:
+
+Descargas el código fuente desde la pagina y lo linkeas a la pagina por el html como un css, Scripts en java mas de nuestro proyecto.
+
+
+Con node.Js, npm install mete todos los archivos.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Lo mas usado:
+
+Contenedores y columnas: Clase .container --> se le aplica a elementos Contenedores y segun la clase container que selecciones vamos a obtener
+distintos resultados, a ese elemento se le aplica un ancho y padding determinado.
+
+Container-fluid : ocupa 100% el tamaño pantalla
+container: establece un max-width, genera un margen en ambos lados del contenedor.
+
+breakpoints aca: se usa la clase .container-"algo", en la parte que dice algo, vas a poder poner sm, md, lg, xl, xxl, fluid. Son distintas medidas 
+que van a ir cambiando solas dependiendo de la cantidad de pixeles que tenga la pantalla, se adapta solo, tiene sus condiciones puestas cada uno, 
+si queres saber los rangos de pixeles, podes buscarlos en bootstrap, ej, el sm: <576px, 100% de ancho, >576 y <768, 540px...etc. Asi sigue,
+son contenedores que podes usar de una sin escribir todo el código.
+
+Grid System: Se basa en un sistema de columnas cheto, el sistema de bootstrap divide nuestras cajas en 12 columnas que se utilizan
+para repartir los elementos hijos de cada contenedor:
+
+clases de grid son .row y .col , tienen diferentes variantes, y se puede utilizar mas de una vez en un mismo elemento, y ponerle
+el numero al lado de la clase para indicarle cuantas columnas se encajan en cada una, ej: "col-9" y a otra "col-3", ahi quiero que divida
+de esa forma a las columnas, una que ocupe 9 y la otra 3. 
+
+breakpoints me permiten elegir cuanto quiero que utilicen dependiendo el breakpoints en el que me encuentro, unidades de columnas.
+
+Compenents: 
+Buttons: con una simple linea en html podemos hacer formularios estéticos y en distintos colores.
+
+
+

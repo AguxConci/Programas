@@ -4,14 +4,15 @@
          <script src="https://kit.fontawesome.com/f1c41f8039.js" crossorigin="anonymous"></script>
              <link rel="stylesheet" type="text/css" href="Visualitos.css">
              <meta charset="utf-8">
-	     <meta name="description" content="Descripcion"/>
-	     <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/> (pa que aparezcas en el algoritmo con palabras)
-             <meta name="author" content="Nombre del autor" />
-	     <meta name="copyright" content="Propietario del copyright" />
+	     	 <meta name="description" content="Descripcion">
+	     	 <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/> (pa que aparezcas en el algoritmo con palabras)
+         	 <meta name="author" content="Nombre del autor" >
+	     	 <meta name="copyright" content="Propietario del copyright" >
+		 	 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-            <title>
+             <title>
                 Titulo ventana
-            </title>
+             </title>
 
                 <header>Titulo pagina</header>
 
