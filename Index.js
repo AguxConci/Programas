@@ -4,7 +4,8 @@ const pi = 3.1415926535
 let nombre 
 let numero = 10
 
-/* if (confirm("Te gusta mi pagina") && nombre == "agus" || nombre == "Agus") {
+/* 
+if (confirm("Te gusta mi pagina") && nombre == "agus" || nombre == "Agus") {
     alert("Hola master")
 } else if ("Irina") {
     alert("Hola Reina")
@@ -12,6 +13,7 @@ let numero = 10
     alert("hola pete")
 } */
 
+/*
 do{
     nombre = prompt("Como te llamas")
     if (nombre == "Agus" || nombre == "agus"){
@@ -23,4 +25,14 @@ do{
 
 function prueba() {
     alert("Prueba")
+}
+*/
+
+const verificar = () => {
+    nombre = prompt("Decime tu nombre")
+    if (nombre == "Agus" || nombre == "agus" || nombre == "") {
+    return true 
+    } else {
+       return false
+    }
 }
