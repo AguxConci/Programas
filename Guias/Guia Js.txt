@@ -168,12 +168,77 @@ si cumplís o no la condición.
 
 For: es un while pero en una sola linea:
 
-for(let i=0; i<10; i++) {
+for(let i=0; i<10; i++) {  (En cada condicion puedo poner parametros o valores de otras funciones.)
     console.log("El numero es " + i)
     i ++
 }  en while temes que tener una linea para inicializar, contar, y otra cosa mas.
-El for se usa para cant de veces, cantidades (numeros) mientras que while se puede usar para comparaciones de respuestas y asi,
+El for se usa para cant de veces, cantidades (números) mientras que while se puede usar para comparaciones de respuestas y asi,
 toma distintos valores, for no.
+
+Funciones: 
+Bloque de código que agrupa, encapsula, o estructura ciertos comando, operaciones, etc, que puede ser reutilizados al llamar el nombre
+de la función, lo importante es que al ser reutilizabas, las definís una vez y ya no tenes que definiría de nuevo. En vez de 
+escribir el codigo cada vez que queres hacer algo, solo llamas.
+
+Declarar funciones: 
+Forma declarar: 
+Forma declarativa o algo ase (mas antigua):
+
+function nombre(variables) {
+ // Código a ser ejecutado
+}
+
+Asi, declaras la función con algún nombre, especifico para distinguirla, ahora cuando la llames/ invoques, va a hacer lo haya dentro 
+de las llaves. Para llamarla tenes que hacerlo con nombre(), el paréntesis es obligatorio pa que cumpla lo que hay dentro,
+si no pones el (), te va a mostrar como una variable, te mostraría toda la función como esta escrita : function nombre.....
+(console.log(nombre) muestra lo de adentro de la función también, console.log(nombre()) la invoca).
+
+Forma expresada o expresa:  Se usa un poco 
+A diferencia de crear un función, guardas una función dentro de una variable, declaras una variable y dentro le pones la funcion
+lo que significa que al ser una variable, toma la propiedad de hoisting de variables en JavaScript, que no pueden ser llamadas 
+antes de ser declaradas como variables. (Con una función como la primera, la funcion ya existe, y la podes llamar, la info la tiene
+el la pagina, mientras que si intentas ejecutar una función que todavía no esta declarada, no podes usarla )
+
+const prueba = function() {
+
+}
+
+Forma mas importante funciones: Arrow functions: Es parecida a una funcion expresada, (pueden ser funciones de una sola linea)
+
+
+
+
+Return palabra clave: Sirve para sacar info de una función.Permite retornar un valor de adentro de una función, 
+lo podes usar para hacer algo dentro de la función o hacer algo dentro de la función y pasarla a otro lado.
+function sumar() {
+    let resultado = 33 + 18
+
+    return resultado;
+}
+let suma = sumar();
+console.log(suma + 7); ---> 58 Aca la función cuando es ejecutada hace la suma y al usar return, retorna o contesta en este caso la 
+variable resultado. Es importante para sacar datos de dentro de una función. Cualquier instrucción debajo de un return corta la 
+función, si hay un return, no importa el código de abajo, no va a ser leído, es el fin de una ejecución.
+
+Parametros y argumento: Son variables que se usan dentro de la funcion no mas.
+Nos permiten pasarle info a la funcion para que trabaje con esa informacion dentro. Donde esta el parentesis al lado del nombre, 
+le pones nombre al parametro, puede ser super simple el nombre, le pones la cant que quieras, y asi cuando invoques la funcion
+le podes aclarar que valores queres que sean introducidos en la funcion. ej:
+function sumar(a, b) {
+    let resultado = a + b;
+    return resultado;
+} entonces, llamando la funcion asi: sumar(10,20), esto te va a devolver 30.
+
+Puedo enviar parametros de otras funciones para dirigir un resultado o info de algun lado dentro de otro.
+
+let parametro = otra cosa.
+
+function caminar(parametro){
+    ......
+}  Y asi, con el parametro declarado, lo puedo llamar.
+
+
+
 
 
 
