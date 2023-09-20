@@ -26,7 +26,7 @@ Vincular archivo JavaScript:
     Interna dentro de una etiqueta <script></script> (que te permite escribir otro lenguaje adentro del html, no muy util)
     Externa: <script type="text/JavaScript" src="nombre.js"></script>, la etiqueta va en 
     -------------------------------------------------------------------------------------------------------------------------------------------
-
+    Todas las palabras de inicio suelen ir con minúscula 
     Para ver si funca lo que escribimos usaremos la consola del navegador usando f12 (inspeccionar) y probamos el código ahi. 
     Se puede probar el código dentro de la consola sin escribirlo en el código del archivo.  (shift+enter salto de linea).
     Not defined: No aclaraste que significa algo.
@@ -41,22 +41,32 @@ Comentarios y mensajes básicos:
 	En los textos podes concatenar contenido alert("bienvenido " + variable), asi pones la palabra bienvenido + la variable que pinte.
 	concatenación con backstip o algo ase, Alert(`Hola`) (busca como carajos funca)
 
-	prompt(): despliega un mensaje en la ventana del navegador con una casilla para un valor, que es un string
-
-	alert(): despliega un mensaje en la ventana del navegador con el texto que reciba
-
 	console.log(): mensaje que se ve en la consola.
-
+     console.error(): muestra un icono rojo de error con el mensaje coloreado en rojo.
+     console.warn(): muestra un icono amarillo de advertencia.
+     sole.dir(object). Imprime una representación del objeto con JavaScript.
+     console.dirxml(object). Imprime una representación en XML de los elementos descendientes del objeto. 
+     console.clear(). Limpia la ventana de la consola.
+     console.table(). Hace una tabla.
+	prompt(): despliega un mensaje en la ventana del navegador con una casilla para un valor, que es un string
+	alert(): despliega un mensaje en la ventana del navegador con el texto que reciba
 	confirm(): pregunta de confirmar o cancelar.
 ------------------------------------------------------------------------------------------------------------------------------------------------
-Variables y constantes: 
+Variables , constantes y hoisting: 
+
+    Una variable declarada con var es sometida a hoisting, (levantamiento), la declaración de la variable es "levantada", básicamente
+    un var, al ser declarada, ya existe en la pagina, pero si le das un valor en el fondo, va a existir, va a estar declarada
+    pero no va a tener valor hasta que no lea el fondo, existe pero no tiene valor hasta que no lo lea, al contrario, let Y
+    const no hacen esto, si declaras Let al final, y la llamas antes, no va a existir de una, no tiene valor y no existe.
+
+
     Espacio de la memoria del ordenador que guarda info durante la ejecución del programa, const declara una variable que 
 	no puede ser afectada, let y var si pueden ser afectadas. 
 	(memoria volátil, dura lo que dure la ejecución) se declaran y se asigna un nombre para identificarlas: 
 	
-	(Var y Let declaran variables, pero var declara globalmente, mientras que let declara de forma local, dentro de bloques. Mas variables
+	Var y Let declaran variables, pero var declara globalmente, mientras que let declara de forma local, dentro de bloques. Mas variables
 	usadas constantemente usan mas recursos, Var mantiene global, lo que las mantiene al mismo tiempo y gasta, let las usa y después de 
-	terminar su uso (sale de su bloque de programación), deja de gastar recursos.)
+	terminar su uso (sale de su bloque de programación), deja de gastar recursos.
 	
 	Declarar Variables: Let nombre = "valor" ----> ahi declaraste una variable que se llama "nombre", este nombre solo puede contener letras, guion 
 	bajo como signo de espacio y signo de peso($).Ahora podes "llamar" la variable en la consola, como una variable declarada, cuando la nombres, 
@@ -68,9 +78,83 @@ Variables y constantes:
 	Ahora podes guardar datos, declarando una variable con un comando dentro, por ejemplo, let nombre = prompt("Dime tu nombre"), te pregunta, 
 	pones tu nombre y después cuando le preguntes a la consola "nombre", te devuelve lo que hayas puesto ahi como variable.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tipos de datos:
+    Son los distintos tipos de información que podes ingresar en variables, números, strings, etc.
+
+    number: En javascript solo existe un tipo de datos numérico, y pueden tener valores en base 10, números de 0 a 9, valores
+    en base 8, números de 0 a 7 (para escribir un numero que siga a 8 seria con 0, 045??) y el sistema en base 16 o mejor 
+    conocido como hexadecimal, que tiene de 0 a 9 y de A a F.
+
+    La suma de números y strings numéricos: 23 + "33" = 2333.
+
+    String: guarda texto,  Siempre que escribamos una cadena de caracteres debemos utilizar las comillas dobles (""), 
+    simples ('') o invertidas (``). Todo lo escrito entre comillas no tiene limites de reglas como el demás texto,
+    vale como un texto sin significado para javascript.
+
+    Caracteres de escape en cadenas de texto: Son una serie de caracteres especiales que sirven para expresar en una cadena de 
+    texto determinados controles como puede ser un salto de linea o un TAB, estos son los caracteres de escape, se escriben
+    con un / y un carácter para que signifique algo en especifico: Salto de línea:\n, Camilla simple: \', Camilla doble: \"
+    , Tabulador: \t, Retorno de carro: \r, Avance de página: \f, Retroceder espacio: \b, Contrabraza: \\.
+
+    Booleanos: Guardan info de True o False (Si o No), se usan en operaciones lógicas.
+
+    Funciones de datos: 
+
+    ParseInt() y parseFloat(): Son funciones creadas para analizar un string y devolver un numero si es posible,los espacios finales
+    e iniciales se ignoran. JavaScript analiza la cadena para extraer las cifras que encuentre al principio, empezando de izquierda a 
+    derecha, si lo primero que lee es un numero, entonces todo lo que siga siendo numero va a ser lo que saque, si lo primero que lee
+    es una letra u otra cosa no numérica, entonces va a tomarlo como que no hay números en la cadena y va a resultar en un NaN (Not a 
+    number). Cuando el valor no es un string, JavaScript lo convierte en string,en el caso de objetos, se hace llamando al metodo 
+    toString().
+
+    parseInt(string, radix) - Conversión de string a entero: Radix es opcional y representa la base en la que estamos trabajando,
+    normalmente se toma el valor en base decimal. parseInt() tiene un parámetro extra para indicar la base del número (radix).
+
+    parseFloat(string) - Conversión de string a número en coma flotante: 
+    El número siempre se interpreta como decimal, independientemente de cualquier prefijo que le pongamos (0 para octal ó 0x para
+    hexadecimal). parseFloat() no admite radix. Todos los números se consideran en base decimal.
+
+    La diferencia con el anterior, además de admitir decimales, es que los números en coma flotante admiten la notación exponencial,
+    del tipo "314e-2" o "0.0314e+2". Si la función encuentra un carácter que no sea un número (0-9), un signo (+ o -), un punto decimal o un exponente, ignorará 
+    todos los caracteres que vengan a continuación.
+    -parseInt() y parseFloat() pueden extraer un número al principio de un string.
+    -parseInt(), Number() y '+' interpretan el prefijo '0x' como número hexadecimal, parseFloat() no.
+    -parseInt() no entiende la notación exponencial, todos los demás si.
+    -parseInt() y parseFloat() convierten el string vacío en NaN.
+    -parseInt() y parseFloat() de un boolean es NaN.
+
+
+
+
+
+
+
+
+    number(): A diferencia de los anteriores, este y conversion implicita (el que sigue), son especificamente para conversion de 
+    tipos, mientras que parse() es para extraer un numero de un string, funciona como un conversor a tipo numérico,
+    ignora los espacios al principio y al final, pero, a diferencia de los métodos anteriores, cuando un string contiene caracteres
+    no convertibles a números el resultado siempre es NaN, no trata de 'extraer' la parte numérica. Number("") es 0
+    igual que con " ". A los  booleanos los convierte en 1 y 0 (true false) y también puede expresar
+     resultados Q en boolean 1 o 0 si hay una operacion dentro.
+
+    Conversión implícita '+'
+
+    La conversión implícita es una forma de conversión rápida a número. Podemos utilizar cualquier 
+    operación que fuerce al intérprete a realizar una conversión implícita de tipos pero que no varíe el operando,La forma más
+    utilizada por su simplicidad es +var. El operador unitario + no cambia el valor de var pero lo convierte a número. No confundir
+     con ++var que sí cambia el valor, sumándole uno. Este tipo de conversión, igual que Number(), devuelve NaN si el 
+     string contiene caracteres no numéricos. Como veremos en los siguientes ejemplos, 
+     esta forma de conversión es equivalente a Number() y devuelve los mismos resultados.
+
+     -Si el string contiene caracteres no numéricos, Number() y '+' no lo convierten, devuelve NaN.
+     -Cuando el argumento es un objeto, parseInt() y parseFloat() llamarán al método .toString() antes de analizar
+      la cadena. Number() y +var llamarán primero a .valueOf() y después a .toString() si es necesario.
+     -Number() y '+' convierten el string vacío en 0.
+     Number() y '+' de un boolean devuelve 0 para false y 1 para true.
+---------------------------------------------------------------------------------------------------------------------------------------------------
 Operadores: 
-     https://app.code2flow.com/ Convierte código en flujo, linea por linea, podes usarlo pa probar cosas de if.
-	 Son caracteres especiales reservados para modificar, comprobar, asignar o reasignar los datos guardados en variables,
+        https://app.code2flow.com/ Convierte código en flujo, linea por linea, podes usarlo pa probar cosas de if.
+	    Son caracteres especiales reservados para modificar, comprobar, asignar o reasignar los datos guardados en variables,
 		Aritméticos: Suma +, resta -, multiplicación *, división /, resto % y potencia ** (X elevado a algo)
 		El símbolo de + también se usa en los strings para concatenar cosas, pero es mejor usar backticks.
 		
@@ -154,9 +238,9 @@ Operadores:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Bucles:
 
-	While: permite hacer algo varias veces, lo podes poner adentro del Switch para repetir la situacion hasta que se cumplan las situaciones, 
+	While: permite hacer algo varias veces, lo podes poner adentro del Switch para repetir la situación hasta que se cumplan las situaciones, 
 	si alguien quiere saber cuanto dinero hay en cuenta, si tiene 0, lo manda al 0 y le vuelve a preguntar si quiere ver la plata o salir,
-	si le da de nuevo, ve el 0, sino, sigue de largo. Tambien se puede con numeros y asi:
+	si le da de nuevo, ve el 0, sino, sigue de largo. También se puede con números y asi:
 	
 	let i = 0;
 	while (i<10) {
@@ -181,10 +265,9 @@ Funciones:
     de la función, lo importante es que al ser reutilizabas, las definís una vez y ya no tenes que definiría de nuevo. En vez de 
     escribir el código cada vez que queres hacer algo, solo llamas.
     
-    Declarar funciones: 
-    Forma declarar: 
-    Forma declarativa o algo ase (mas antigua):
-    
+    Declarar funciones:  
+
+    Forma declarativa o algo ase (mas antigua):    
     function nombre(variables) {
     // Código a ser ejecutado
     }
@@ -193,7 +276,7 @@ Funciones:
     de las llaves. Para llamarla tenes que hacerlo con nombre(), el paréntesis es obligatorio pa que cumpla lo que hay dentro,
     si no pones el (), te va a mostrar como una variable, te mostraría toda la función como esta escrita : function nombre.....
     (console.log(nombre) muestra lo de adentro de la función también, console.log(nombre()) la invoca).
-            
+    -------------------------------------       
     Forma expresada o expresa:  Se usa un poco 
     A diferencia de crear un función, guardas una función dentro de una variable, declaras una variable y dentro le pones la función
     lo que significa que al ser una variable, toma la propiedad de hoisting de variables en JavaScript, que no pueden ser llamadas 
@@ -203,10 +286,10 @@ Funciones:
     const prueba = function() {
     
     }
-    
-    Forma mas importante funciones: Arrow functions: Es mas fácil de leer, declaras la variable, nombre, = (parámetro) y aca viene "=>", que 
-    significa que eso es lo que se ejecuta, Si es una sola linea, la flecha también sirve como return, y no necesita {}, si tiene mas 
-    de un renglón, entonces va con {} y hay que aclarar return.
+    -------------------------------------
+    Forma mas importante funciones: Arrow functions: Es mas fácil de leer, declaras la variable, nombre, = (parámetro) y 
+    aca viene "=>", que significa que eso es lo que se ejecuta, Si es una sola linea, la flecha también sirve 
+    como return, y no necesita {}. Si tiene mas  de un renglón, entonces va con {} y hay que aclarar return.
     
     const prueba = () => "Hola"    Es una función de una sola linea y no necesita return en este caso, es implícito.
     
