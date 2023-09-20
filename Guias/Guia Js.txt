@@ -1,270 +1,270 @@
 Principio: Es Front-End
 
-Es un lenguaje del 1995 basado en C, se le denomina lenguaje "Del lado de cliente" porque se ejecuta en entorno de navegador, si no
-esta en navegador, se necesitara un emulador que genere un entorno que lo acepte, si queres que pase en una calculadora,
-tenes que hacer lo que queres de java y también el emulador para que funque., a diferencia 
-de otros lenguajes que corren en el servidor. La mayoría de lo que vamos a escribir va a ser código que también funca en JavaScript, 
-ECMAscript engloba a JavaScript kinda.
+    Es un lenguaje del 1995 basado en C, se le denomina lenguaje "Del lado de cliente" porque se ejecuta en entorno de navegador, si no
+    esta en navegador, se necesitara un emulador que genere un entorno que lo acepte, si queres que pase en una calculadora,
+    tenes que hacer lo que queres de java y también el emulador para que funque., a diferencia 
+    de otros lenguajes que corren en el servidor. La mayoría de lo que vamos a escribir va a ser código que también funca en JavaScript, 
+    ECMAscript engloba a JavaScript kinda.
 
-Orientado a prototipos, multiparadigma e interprendo, Lenguaje orientado a objetos. Es un lenguaje interpretado, lo que significa
-que lee el código y lo interpreta y procesa en tiempo de ejecución (lee, ejecuta la linea, lee, ejecuta) a diferencia de los 
-lenguajes compilados que leen todo el código, lo interpretan y lo ejecutan de una, no linea linea. 
+    Orientado a prototipos, multiparadigma e interprendo, Lenguaje orientado a objetos. Es un lenguaje interpretado, lo que significa
+    que lee el código y lo interpreta y procesa en tiempo de ejecución (lee, ejecuta la linea, lee, ejecuta) a diferencia de los 
+    lenguajes compilados que leen todo el código, lo interpretan y lo ejecutan de una, no linea linea. 
 
-Se usa para hacer manipulación de documentos web, la interacción con el usuario y un toque con el servidor. 
-- Cambiar todo el contenido de un documento web (letra, colores, animaciones, etc)
-- Enviar Información a través de la red de servidores remotos, descargar archivos, etc.
-- Almacenamiento local en el navegador (recuperar, almacenar info durante info y visualización del docu web.)
-
-Para que NO se usa:------------------------------------------------------------------------------------------------------------------------
-- No acceso a disco duro, eliminar info.
-- Acceso a la RAM, ROM.
-- Acceso a la tarjeta RED o procesadores.
-- Trabajar del lado del servidor.
--------------------------------------------------------------------------------------------------------------------------------------------
-
-Vincular archivo JavaScript:
-Interna dentro de una etiqueta <script></script> (que te permite escribir otro lenguaje adentro del html, no muy util)
-Externa: <script type="text/JavaScript" src="nombre.js"></script>, la etiqueta va en 
--------------------------------------------------------------------------------------------------------------------------------------------
-
-Para ver si funca lo que escribimos usaremos la consola del navegador usando f12 (inspeccionar) y probamos el código ahi. 
-Se puede probar el código dentro de la consola sin escribirlo en el código del archivo.  (shift+enter salto de linea).
-Not defined: No aclaraste que significa algo.
-Te dice en que archivo esta en el error.
-Te dice donde hay un error en la linea especifica, dice donde el código no se puede ejecutar, un error antes puede hacer que una linea después
-no funque.
-
--------------------------------------------------------------------------------------------------------------------------------------------
-Comentarios: // una linea // , /* mas de una linea */
-
-En los textos podes concatenar contenido alert("bienvenido " + variable), asi pones la palabra bienvenido + la variable que pinte.
-concatenación con backstip o algo ase, Alert(`Hola`) (busca como carajos funca)
-
-prompt(): despliega un mensaje en la ventana del navegador con una casilla para un valor, que es un string
-
-alert(): despliega un mensaje en la ventana del navegador con el texto que reciba
-
-console.log(): mensaje que se ve en la consola.
-
-confirm(): pregunta de confirmar o cancelar.
-
-Variables y constantes: espacio de la memoria del ordenador que guarda info durante la ejecución del programa, const declara una variable que 
-no puede ser afectada, let y var si pueden ser afectadas. 
-(memoria volátil, dura lo que dure la ejecución) se declaran y se asigna un nombre para identificarlas: 
-
-(Var y Let declaran variables, pero var declara globalmente, mientras que let declara de forma local, dentro de bloques. Mas variables
-usadas constantemente usan mas recursos, Var mantiene global, lo que las mantiene al mismo tiempo y gasta, let las usa y después de 
-terminar su uso (sale de su bloque de programación), deja de gastar recursos.)
-
-Declarar Variables: Let nombre = "valor" ----> ahi declaraste una variable que se llama "nombre", este nombre solo puede contener letras, guion 
-bajo como signo de espacio y signo de peso($).Ahora podes "llamar" la variable en la consola, como una variable declarada, cuando la nombres, 
-te va a devolver el valor que hayas declarado.
-
-Tipos de datos: JavaScript es débilmente tipado, o dinámico, acepta strings, number, boolean, null, undefined, symbol y object (object, colección de
-datos), etc. Son valores que le podes dar a las variables.
-
-Ahora podes guardar datos, declarando una variable con un comando dentro, por ejemplo, let nombre = prompt("Dime tu nombre"), te pregunta, 
-pones tu nombre y después cuando le preguntes a la consola "nombre", te devuelve lo que hayas puesto ahi como variable.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-https://app.code2flow.com/ Convierte código en flujo, linea por linea, podes usarlo pa probar cosas de if.
-
-Operadores:
-Son caracteres especiales reservados para modificar, comprobar, asignar o reasignar los datos guardados en variables,
-
-Aritméticos: Suma +, resta -, multiplicación *, división /, resto % y potencia ** (X elevado a algo)
-El símbolo de + también se usa en los strings para concatenar cosas, pero es mejor usar backticks.
-
-Asignación: le dan un nuevo valor a alguna variable despues de hacerle una operacion el resultado que guarde va a reemplazar el anterior, si 
-declaro una variable numérica, puedo usar "nombre var" += , -=, *=, /=, %= y **=, y a la derecha el numero con el que quiero que opere:
-let numero = 10
-numero += 5
-15
-
-Incremento: ++ o -- ,suman o restan 1, literalmente, 1. Y cambia si se ponen adelante o atrás --menos o menos--, dependiendo de como lo escribas, En
-ambos casos realiza la operación de sumar o restar, pero si esta adelante, te muestra el resultado del numero +1, si esta despues, te muestra el numero
-sin haberlo sumado, pero lo hizo.
-let numero = 10
-numero ++ 5
-6
-
-Comparaciones: Asi no mas siempre devuelven True o False 
-<,>, >=, <=, ==, ===, !==. 
-Los primeros 4 son conocidos, después, el == comparación simple, === c.estricta, "10"(string)== 10(numero), da true, no importa el tipo de dato,
-mientras que "10" === 10 , False, porque "10" es un tipo de dato string, mientras que 10 es numérico, son mas condiciones de igualdad.
-(podes usarlo en comparaciones de igualdad con exactamente los mismos tipos de datos, info de otro servidor, de otras apps, cosas ase).
-0 == false, true      También esta "20" != 20 desigualdad simple (es lo mismo que el símbolo de igual tachado)
-0 === false, false
-(googlealo).
-
-Lógicos: AND(&&) OR(||) not(!)
-AND: ambas condiciones se cumplen.
-OR: una u otra se cumplen.
-NOT: Invierte el booleano. Niega lo que digas.
-
-Condicionales: Se leen de izquierda a derecha, se usan paréntesis para ordenar la precedencia. Si quiero que haga algo primero, pongo en paréntesis
- para que resuelva  eso primero y después haga la comparación general.
-
-if, si la condición es verdadera, se ejecuta
-Else, si el if resulta falso, va después del if.
-Switch para especificar muchos bloques Condicionales de código que se ejecutaran.
-
-if (condición) {
-   Esto se ejecuta si condición se cumple.
-} else if (otra condición) {
-    lo que pasa en caso contrario, no se cumplió condición.
-} else {
+    Se usa para hacer manipulación de documentos web, la interacción con el usuario y un toque con el servidor. 
+        - Cambiar todo el contenido de un documento web (letra, colores, animaciones, etc)
+    - Enviar Información a través de la red de servidores remotos, descargar archivos, etc.
+    - Almacenamiento local en el navegador (recuperar, almacenar info durante info y visualización del docu web.)
     
-} Esto es anidar, se pueden anidar condiciones distintas hasta que hagan lo que quieras.
+    Para que NO se usa:------------------------------------------------------------------------------------------------------------------------
+    - No acceso a disco duro, eliminar info.
+    - Acceso a la RAM, ROM.
+    - Acceso a la tarjeta RED o procesadores.
+    - Trabajar del lado del servidor.
+    -------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+Vincular archivo JavaScript:
+    Interna dentro de una etiqueta <script></script> (que te permite escribir otro lenguaje adentro del html, no muy util)
+    Externa: <script type="text/JavaScript" src="nombre.js"></script>, la etiqueta va en 
+    -------------------------------------------------------------------------------------------------------------------------------------------
 
-Puedo usar otras variables ya creadas o crearlas dentro del if, pero no crear la variable en la condición, porque una condición no crea una variable.
-La variable que crees dentro del if va a borrarse después de hacer lo que tenga que hacer en el if, si queres trabajar con una variable que cambia
-con el if, declaras la variable afuera, y haces que cambie adentro.
-Asi también puedo usar cualquier comando, que suelen devolver un boolean o cosas asi, por ejemplo if (alert("esta buena la pagina?)) { y decís algo }, 
-si confirman, devolverá lo de adentro, porque confirmar da true.
+    Para ver si funca lo que escribimos usaremos la consola del navegador usando f12 (inspeccionar) y probamos el código ahi. 
+    Se puede probar el código dentro de la consola sin escribirlo en el código del archivo.  (shift+enter salto de linea).
+    Not defined: No aclaraste que significa algo.
+    Te dice en que archivo esta en el error.
+    Te dice donde hay un error en la linea especifica, dice donde el código no se puede ejecutar, un error antes puede hacer que una linea después
+    no funque.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Comentarios y mensajes básicos:
 
-Operador ternario: 
+	// una linea // , /* mas de una linea */ (Si seleccionas un bloque y vas a file podes meterle comentario a todo)
 
-Operación de comparación que nos deja poner mensajes o valores:
+	En los textos podes concatenar contenido alert("bienvenido " + variable), asi pones la palabra bienvenido + la variable que pinte.
+	concatenación con backstip o algo ase, Alert(`Hola`) (busca como carajos funca)
 
-let numero = 23
-let resultado = numero >= 13 ? "Es mayor a 13" : "Es menor a 13"
+	prompt(): despliega un mensaje en la ventana del navegador con una casilla para un valor, que es un string
 
-Esta operación compara, y dependiendo del resultado te tira uno u otra opción. (googlea bien como funca).
+	alert(): despliega un mensaje en la ventana del navegador con el texto que reciba
 
-Otros condicionales:
-AND : a && b , devuelve a si es flase, sino b 
-?: a ? b 
+	console.log(): mensaje que se ve en la consola.
 
-Switch: funciona como un bloque condicional if/else, verifica varias cosas al mismo tiempo:
-
-Switch(variable) {
-    case "algo" :
-        code block1;
-        break:
-    case "algo2":
-        code block2;
-        break:
-    default:
-        code block3;
-}
-
-Esto se lee como: Si el primer case es = a "algo", envía code block1, sino, verifica si da el 2, y sino da el 3, verifica si tu variable es 
-igual a lo que tengas al lado de case.
+	confirm(): pregunta de confirmar o cancelar.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Variables y constantes: 
+    Espacio de la memoria del ordenador que guarda info durante la ejecución del programa, const declara una variable que 
+	no puede ser afectada, let y var si pueden ser afectadas. 
+	(memoria volátil, dura lo que dure la ejecución) se declaran y se asigna un nombre para identificarlas: 
+	
+	(Var y Let declaran variables, pero var declara globalmente, mientras que let declara de forma local, dentro de bloques. Mas variables
+	usadas constantemente usan mas recursos, Var mantiene global, lo que las mantiene al mismo tiempo y gasta, let las usa y después de 
+	terminar su uso (sale de su bloque de programación), deja de gastar recursos.)
+	
+	Declarar Variables: Let nombre = "valor" ----> ahi declaraste una variable que se llama "nombre", este nombre solo puede contener letras, guion 
+	bajo como signo de espacio y signo de peso($).Ahora podes "llamar" la variable en la consola, como una variable declarada, cuando la nombres, 
+	te va a devolver el valor que hayas declarado.
+	
+	Tipos de datos: JavaScript es débilmente tipado, o dinámico, acepta strings, number, boolean, null, undefined, symbol y object (object, colección de
+	datos), etc. Son valores que le podes dar a las variables.
+	
+	Ahora podes guardar datos, declarando una variable con un comando dentro, por ejemplo, let nombre = prompt("Dime tu nombre"), te pregunta, 
+	pones tu nombre y después cuando le preguntes a la consola "nombre", te devuelve lo que hayas puesto ahi como variable.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Operadores: 
+     https://app.code2flow.com/ Convierte código en flujo, linea por linea, podes usarlo pa probar cosas de if.
+	 Son caracteres especiales reservados para modificar, comprobar, asignar o reasignar los datos guardados en variables,
+		Aritméticos: Suma +, resta -, multiplicación *, división /, resto % y potencia ** (X elevado a algo)
+		El símbolo de + también se usa en los strings para concatenar cosas, pero es mejor usar backticks.
+		
+		
+		Asignación: le dan un nuevo valor a alguna variable después de hacerle una operación el resultado que guarde va a reemplazar el anterior, si 
+		declaro una variable numérica, puedo usar "nombre var" += , -=, *=, /=, %= y **=, y a la derecha el numero con el que quiero que opere:
+		let numero = 10
+		numero += 5
+		15
+		
+		Incremento: ++ o -- ,suman o restan 1, literalmente, 1. Y cambia si se ponen adelante o atrás --menos o menos--, dependiendo de como lo escribas, En
+		ambos casos realiza la operación de sumar o restar, pero si esta adelante, te muestra el resultado del numero +1, si esta despues, te muestra el numero
+		sin haberlo sumado, pero lo hizo.
+		let numero = 10
+		numero ++ 5
+		6
+		
+		Comparaciones: Asi no mas siempre devuelven True o False 
+		<,>, >=, <=, ==, ===, !==. 
+		Los primeros 4 son conocidos, después, el == comparación simple, === c.estricta, "10"(string)== 10(numero), da true, no importa el tipo de dato,
+		mientras que "10" === 10 , False, porque "10" es un tipo de dato string, mientras que 10 es numérico, son mas condiciones de igualdad.
+		(podes usarlo en comparaciones de igualdad con exactamente los mismos tipos de datos, info de otro servidor, de otras apps, cosas ase).
+		0 == false, true      También esta "20" != 20 desigualdad simple (es lo mismo que el símbolo de igual tachado)
+		0 === false, false
+		(googlealo).
+		
+		Lógicos: AND(&&) OR(||) not(!)
+		AND: ambas condiciones se cumplen.
+		OR: una u otra se cumplen.
+		NOT: Invierte el booleano. Niega lo que digas.
+		
+		Condicionales: Se leen de izquierda a derecha, se usan paréntesis para ordenar la precedencia. Si quiero que haga algo primero, pongo en paréntesis
+		para que resuelva  eso primero y después haga la comparación general.
+		
+		if, si la condición es verdadera, se ejecuta
+		Else, si el if resulta falso, va después del if.
+		Switch para especificar muchos bloques Condicionales de código que se ejecutaran.
+		
+		if (condición) {
+		Esto se ejecuta si condición se cumple.
+		} else if (otra condición) {
+			lo que pasa en caso contrario, no se cumplió condición.
+		} else {
+			
+		} Esto es anidar, se pueden anidar condiciones distintas hasta que hagan lo que quieras.
+		
+		Puedo usar otras variables ya creadas o crearlas dentro del if, pero no crear la variable en la condición, porque una condición no crea una variable.
+		La variable que crees dentro del if va a borrarse después de hacer lo que tenga que hacer en el if, si queres trabajar con una variable que cambia
+		con el if, declaras la variable afuera, y haces que cambie adentro.
+		Asi también puedo usar cualquier comando, que suelen devolver un boolean o cosas asi, por ejemplo if (alert("esta buena la pagina?)) { y decís algo }, 
+		si confirman, devolverá lo de adentro, porque confirmar da true.
+		
+		Operador ternario: 
+		
+		Operación de comparación que nos deja poner mensajes o valores:
+		
+		let numero = 23
+		let resultado = numero >= 13 ? "Es mayor a 13" : "Es menor a 13"
+		
+		Esta operación compara, y dependiendo del resultado te tira uno u otra opción. (googlea bien como funca).
+		
+		Otros condicionales:
+		AND : a && b , devuelve a si es flase, sino b 
+		?: a ? b 
+		
+		Switch: funciona como un bloque condicional if/else, verifica varias cosas al mismo tiempo:
+		
+		Switch(variable) {
+			case "algo" :
+				code block1;
+				break:
+			case "algo2":
+				code block2;
+				break:
+			default:
+				code block3;
+		}
+		
+		Esto se lee como: Si el primer case es = a "algo", envía code block1, sino, verifica si da el 2, y sino da el 3, verifica si tu variable es 
+		igual a lo que tengas al lado de case.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Bucles:
 
-While: permite hacer algo varias veces, lo podes poner adentro del Switch para repetir la situacion hasta que se cumplan las situaciones, 
-si alguien quiere saber cuanto dinero hay en cuenta, si tiene 0, lo manda al 0 y le vuelve a preguntar si quiere ver la plata o salir,
-si le da de nuevo, ve el 0, sino, sigue de largo. Tambien se puede con numeros y asi:
-
-let i = 0;
-while (i<10) {
-    console.log("El numero es " + i)
-    i ++
-} Esto significa, que hasta que i no sea mayor a 10, esto se repite, sumando 1 a i.
-
-dowhile: do while hace por lo menos 1 sola vez el ciclo que quieras hacer. sin verificar la condición en la primera vez, y despues verifica 
-si cumplís o no la condición. Se escribe empezando con do {} y sigue con while despues de la llave.
-
-For: es un while pero en una sola linea:
-
-for(let i=0; i<10; i++) {  (En cada condicion puedo poner parametros o valores de otras funciones.)
-    console.log("El numero es " + i)
-    i ++
-}  en while temes que tener una linea para inicializar, contar, y otra cosa mas.
-El for se usa para cant de veces, cantidades (números) mientras que while se puede usar para comparaciones de respuestas y asi,
-toma distintos valores, for no.
+	While: permite hacer algo varias veces, lo podes poner adentro del Switch para repetir la situacion hasta que se cumplan las situaciones, 
+	si alguien quiere saber cuanto dinero hay en cuenta, si tiene 0, lo manda al 0 y le vuelve a preguntar si quiere ver la plata o salir,
+	si le da de nuevo, ve el 0, sino, sigue de largo. Tambien se puede con numeros y asi:
+	
+	let i = 0;
+	while (i<10) {
+		console.log("El numero es " + i)
+		i ++
+	} Esto significa, que hasta que i no sea mayor a 10, esto se repite, sumando 1 a i.
+	
+	dowhile: do while hace por lo menos 1 sola vez el ciclo que quieras hacer. sin verificar la condición en la primera vez, y despues verifica 
+	si cumplís o no la condición. Se escribe empezando con do {} y sigue con while despues de la llave.
+	
+	For: es un while pero en una sola linea:
+	
+	for(let i=0; i<10; i++) {  (En cada condicion puedo poner parametros o valores de otras funciones.)
+		console.log("El numero es " + i)
+		i ++
+	}  en while temes que tener una linea para inicializar, contar, y otra cosa mas.
+	El for se usa para cant de veces, cantidades (números) mientras que while se puede usar para comparaciones de respuestas y asi,
+	toma distintos valores, for no.	
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Funciones: 
-Bloque de código que agrupa, encapsula, o estructura ciertos comando, operaciones, etc, que puede ser reutilizados al llamar el nombre
-de la función, lo importante es que al ser reutilizabas, las definís una vez y ya no tenes que definiría de nuevo. En vez de 
-escribir el código cada vez que queres hacer algo, solo llamas.
+    Bloque de código que agrupa, encapsula, o estructura ciertos comando, operaciones, etc, que puede ser reutilizados al llamar el nombre
+    de la función, lo importante es que al ser reutilizabas, las definís una vez y ya no tenes que definiría de nuevo. En vez de 
+    escribir el código cada vez que queres hacer algo, solo llamas.
+    
+    Declarar funciones: 
+    Forma declarar: 
+    Forma declarativa o algo ase (mas antigua):
+    
+    function nombre(variables) {
+    // Código a ser ejecutado
+    }
+    
+    Asi, declaras la función con algún nombre, especifico para distinguirla, ahora cuando la llames/ invoques, va a hacer lo haya dentro 
+    de las llaves. Para llamarla tenes que hacerlo con nombre(), el paréntesis es obligatorio pa que cumpla lo que hay dentro,
+    si no pones el (), te va a mostrar como una variable, te mostraría toda la función como esta escrita : function nombre.....
+    (console.log(nombre) muestra lo de adentro de la función también, console.log(nombre()) la invoca).
+            
+    Forma expresada o expresa:  Se usa un poco 
+    A diferencia de crear un función, guardas una función dentro de una variable, declaras una variable y dentro le pones la función
+    lo que significa que al ser una variable, toma la propiedad de hoisting de variables en JavaScript, que no pueden ser llamadas 
+    antes de ser declaradas como variables. (Con una función como la primera, la función ya existe, y la podes llamar, la info la tiene
+    el la pagina, mientras que si intentas ejecutar una función que todavía no esta declarada, no podes usarla )
+    
+    const prueba = function() {
+    
+    }
+    
+    Forma mas importante funciones: Arrow functions: Es mas fácil de leer, declaras la variable, nombre, = (parámetro) y aca viene "=>", que 
+    significa que eso es lo que se ejecuta, Si es una sola linea, la flecha también sirve como return, y no necesita {}, si tiene mas 
+    de un renglón, entonces va con {} y hay que aclarar return.
+    
+    const prueba = () => "Hola"    Es una función de una sola linea y no necesita return en este caso, es implícito.
+    
+    const prueba = () => {
+        algo1
+        algo2
+        return algoX
+    }
+    Esta por otro lado al ser mas de una linea si necesita el return.
+    Si tiene 1 parámetros, podes no usar paréntesis, si tenes mas, tenes que usarla.
+    
 
-Declarar funciones: 
-Forma declarar: 
-Forma declarativa o algo ase (mas antigua):
-
-function nombre(variables) {
- // Código a ser ejecutado
-}
-
-Asi, declaras la función con algún nombre, especifico para distinguirla, ahora cuando la llames/ invoques, va a hacer lo haya dentro 
-de las llaves. Para llamarla tenes que hacerlo con nombre(), el paréntesis es obligatorio pa que cumpla lo que hay dentro,
-si no pones el (), te va a mostrar como una variable, te mostraría toda la función como esta escrita : function nombre.....
-(console.log(nombre) muestra lo de adentro de la función también, console.log(nombre()) la invoca).
-
-Forma expresada o expresa:  Se usa un poco 
-A diferencia de crear un función, guardas una función dentro de una variable, declaras una variable y dentro le pones la función
-lo que significa que al ser una variable, toma la propiedad de hoisting de variables en JavaScript, que no pueden ser llamadas 
-antes de ser declaradas como variables. (Con una función como la primera, la función ya existe, y la podes llamar, la info la tiene
-el la pagina, mientras que si intentas ejecutar una función que todavía no esta declarada, no podes usarla )
-
-const prueba = function() {
-
-}
-
-Forma mas importante funciones: Arrow functions: Es mas fácil de leer, declaras la variable, nombre, = (parámetro) y aca viene "=>", que 
-significa que eso es lo que se ejecuta, Si es una sola linea, la flecha también sirve como return, y no necesita {}, si tiene mas 
-de un renglón, entonces va con {} y hay que aclarar return.
-
-const prueba = () => "Hola"    Es una función de una sola linea y no necesita return en este caso, es implícito.
-
-const prueba = () => {
-    algo1
-    algo2
-    return algoX
-}
-Esta por otro lado al ser mas de una linea si necesita el return.
-Si tiene 1 parámetros, podes no usar paréntesis, si tenes mas, tenes que usarla.
-
-
-
-
-Return palabra clave: Sirve para sacar info de una función.Permite retornar un valor de adentro de una función, 
-lo podes usar para hacer algo dentro de la función o hacer algo dentro de la función y pasarla a otro lado.
-function sumar() {
+    
+    
+    Return palabra clave: Sirve para sacar info de una función.Permite retornar un valor de adentro de una función, 
+    lo podes usar para hacer algo dentro de la función o hacer algo dentro de la función y pasarla a otro lado.
+    function sumar() {
     let resultado = 33 + 18
+    
+        return resultado;
+    }
+    let suma = sumar();
+    console.log(suma + 7); ---> 58 Aca la función cuando es ejecutada hace la suma y al usar return, retorna o contesta en este caso la 
+    variable resultado. Es importante para sacar datos de dentro de una función. Cualquier instrucción debajo de un return corta la 
+    función, si hay un return, no importa el código de abajo, no va a ser leído, es el fin de una ejecución.
+    
+    Parámetros y argumento: Son variables que se usan dentro de la función no mas.
+    Nos permiten pasarle info a la función para que trabaje con esa información dentro. Donde esta el paréntesis al lado del nombre, 
+    le pones nombre al parámetro, puede ser Super simple el nombre, le pones la cantidad que quieras, y asi cuando invoques la función
+    le podes aclarar que valores queres que sean introducidos en la función. ej:
+    function sumar(a, b) {
+        let resultado = a + b;
+            return resultado;
+    } entonces, llamando la funcion asi: sumar(10,20), esto te va a devolver 30.
+    
+    Puedo enviar parametros de otras funciones para dirigir un resultado o info de algun lado dentro de otro.
+	let parametro = otra cosa.
 
-    return resultado;
-}
-let suma = sumar();
-console.log(suma + 7); ---> 58 Aca la función cuando es ejecutada hace la suma y al usar return, retorna o contesta en este caso la 
-variable resultado. Es importante para sacar datos de dentro de una función. Cualquier instrucción debajo de un return corta la 
-función, si hay un return, no importa el código de abajo, no va a ser leído, es el fin de una ejecución.
+	function caminar(parametro){
+		......
+	}  Y asi, con el parametro declarado, lo puedo llamar.
+	do
 
-Parámetros y argumento: Son variables que se usan dentro de la función no mas.
-Nos permiten pasarle info a la función para que trabaje con esa información dentro. Donde esta el paréntesis al lado del nombre, 
-le pones nombre al parámetro, puede ser Super simple el nombre, le pones la cantidad que quieras, y asi cuando invoques la función
-le podes aclarar que valores queres que sean introducidos en la función. ej:
-function sumar(a, b) {
-    let resultado = a + b;
-    return resultado;
-} entonces, llamando la funcion asi: sumar(10,20), esto te va a devolver 30.
+	Callbakcs:Es Mucho muy importante en Back-End
+	Es una funcion que se pasa a otra funcion como parametro, hay algunas funciones que necesitan callbacks obligatoriamente,
+	los callbacks son funciones asíncronas, podes llamar una funcion de nuevo o kinda. (googleemos), Cuando trabajamos en asincrono, 
+	podemos pedir un dato y puede seguir leyéndose todo, y cuando llegue el dato vuelve a esa digamos.
+	Para escribir un callbacks, creas la funcion original, y otra funcion aparte, después cuando escribas los parámetros, usas uno como el nombre
+	de la funcion, recibís parametro, y despues en vez de return, escribís el nombre del parametro, que  va a ser una funcion,
+	digamos que el parametro se llama (nombre), entonces al final de la funcion escribir nombre(el resultado del a funcion)
+	Al hacer esto, el resultado que quieras de la funcion va a ser procesado como parametro en la otra funcion. 
 
-Puedo enviar parametros de otras funciones para dirigir un resultado o info de algun lado dentro de otro.
-
-let parametro = otra cosa.
-
-function caminar(parametro){
-    ......
-}  Y asi, con el parametro declarado, lo puedo llamar.
-do
-
-Callbakcs:Es Mucho muy importante en Back-End
- Es una funcion que se pasa a otra funcion como parametro, hay algunas funciones que necesitan callbacks obligatoriamente,
-los callbacks son funciones asíncronas, podes llamar una funcion de nuevo o kinda. (googleemos), Cuando trabajamos en asincrono, 
-podemos pedir un dato y puede seguir leyéndose todo, y cuando llegue el dato vuelve a esa digamos.
-Para escribir un callbacks, creas la funcion original, y otra funcion aparte, después cuando escribas los parámetros, usas uno como el nombre
-de la funcion, recibís parametro, y despues en vez de return, escribís el nombre del parametro, que  va a ser una funcion,
- digamos que el parametro se llama (nombre), entonces al final de la funcion escribir nombre(el resultado del a funcion)
-Al hacer esto, el resultado que quieras de la funcion va a ser procesado como parametro en la otra funcion. 
-
-const sumar = (a, b, volar){
-    let resultado = a + b;
-    volar(resultado)
-}  Volar es otra funcion. sumar(1, 2, function(suma)){
-    mmmmmmm
-} Búscate una explicación alguna vez en Google, ta medio falopa.
+	const sumar = (a, b, volar){
+		let resultado = a + b;
+		volar(resultado)
+	}  Volar es otra funcion. sumar(1, 2, function(suma)){
+		mmmmmmm
+	} Búscate una explicación alguna vez en Google, ta medio falopa.
 
 
 
