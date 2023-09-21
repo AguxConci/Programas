@@ -1,15 +1,16 @@
 console.log("Hola desde el archivo de JS")
-let Algo = "banana"
- const pi = 3.14159000900
-let nombre 
-let numero = 10
+const pi = 3.1415
+  
 
-// function sumar() {
-// 	let resultado = 12 + 23;
-// 	 return resultado ;
+let numero 
+function sumar() {
+	let resultado = 12 + 23;
+	 return resultado ;
+ }
+
+
+
  
-//  }
-
 /* 
 if (confirm("Te gusta mi pagina") && nombre == "agus" || nombre == "Agus") {
 	alert("Hola master")
@@ -17,8 +18,8 @@ if (confirm("Te gusta mi pagina") && nombre == "agus" || nombre == "Agus") {
 	alert("Hola Reina")
 } else {
 	alert("hola pete")
-} */
-
+} 
+*/
 /*
 do{
 	nombre = prompt("Como te llamas")
@@ -33,7 +34,7 @@ function prueba() {
 	alert("Prueba")
 }
 */
-
+/* 
 	const verificar = () => {
 		nombre = prompt("Decime tu nombre")
 		if (nombre == "Agus" || nombre == "agus" || nombre == "") {
@@ -41,6 +42,18 @@ function prueba() {
 		} else {
 		return	false
 	}
-	}
+	} */
+
+function nuevoEstu(nombre, nota) {
+	this.nombreEstudiante = nombre
+	this.notaEstudiante = nota
+} 
+const Juan = new nuevoEstu("Juan", 9)
+
+ // Esta es la funcion para crear objetos moldes, van a tener esas propiedades, y despues creas la variable segun el estudiante nuevo que quieras
+  // agregar, y asi podes hacer otra funcion que cree objetos con nombre.
+
+
+
 	
 	

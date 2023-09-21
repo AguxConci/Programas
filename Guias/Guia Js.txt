@@ -348,6 +348,79 @@ Funciones:
 	}  Volar es otra funcion. sumar(1, 2, function(suma)){
 		mmmmmmm
 	} Búscate una explicación alguna vez en Google, ta medio falopa.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Objetos: 
+
+ Literales:
+ Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor.
+ A cualquier variable lo podes convertir en objeto y a cualquier objeto en variable. Y a los objetos podes ponerle todas las propiedades que quieras.
+ Declaras la variable, el nombre y = {}  (unas llaves vacias en principio, ahi va a tener datos del objeto),
+ Los objetos tienen propiedades, que son definidas mediante comas, la nombre, dos puntos, y ahi un string, estas van encerradas en las llaves.
+ Cada propiedad posee atributos propios:
+ valor: que es lo que solemos usar, 
+ configurable: nos permite definir si los atributos va a poder ser modificados
+ Enumerable: Controla si la prop va a ser mostrada cuando se enumeren las props del objeto,
+  writable: Nos permite denifir si el valor de una prop va a poder ser modificado o no.
+
+  Para acceder a los atributos usamos: 
+  Object.getOwnPropertyDescriptor(targety, propiedad), Con esto, en targety buscas el nombre del objeto, y en propiedad, nombras como string la el valor que 
+  queres que tiene el objeto. Esto te va a enlistar las propiedades de ese valor.
+
+ Object.defineProperties(myObj,propiedad, {atributos}) : Con esto, myObj elegis el objeto, propiedad,
+
+ object.key(objeto): devuelve un las valroes y propiedades del objeto que pongas entre parentesis, sirve para contar sus valores o objetos, cuando
+ pedis info a una base de datos, y si te responde un objeto, podes mostrar la info con esto.
+
+ object.values: googlea
+
+ Una vez generado el objeto, podes llamarlo para ver sus propiedades y valores. Ahora, si queres buscar algo especifico dentro de un objeto, 
+ lo podes buscar especificando la prop, ej: Un objeto llamada menu y queres buscar postres digamos: "menu.postres", eso te va a devolver
+ todos los valores que esten en postres. Tambien se hace con menu[postres]
+
+ Para agregar propiedades a un objeto, solo hay que nombrar el objeto, ponemos punto, nombramos la propiedad y el valor que quieras:
+ Si queres agregar una nota al objeto "estudiante", escribis: estudiante.nota = 8 , y ahora se creo la propiedad nota en el objeto 
+ estudiante.
+
+ Y al mismo tiempo, para borrar una propiedad de un objeto es escribiendo "delete", y nombras la prop, en el caso anterior, si queremos
+ borrar la prop de la nota del estudiante, haces: delete estudiante.nota  , asi, ya es eliminada junto con su valor. 
+
+ For...in: Es un bucle especifico para recorrida de objetos, se fija cuantos pares hay.
+ for (const prop in objeto) {
+    console.log(`obj.${prop} = ${obj[prop]}`)  
+ } Produce las props y valores. 
+ 
+ for (prop in estudiantes) {
+    console.log(`En la propiedad ${prop} esta el valor ${estudiante[prop]}`) o ("nombre de propiedad "+ prop + " tiene el valor " + estudiante[prop])
+ }  
+ Esto te va a devolver una lista, de la cantidad de propiedades que tengas y sus valores, con un texto que seria:
+ En la propiedad postre esta el valor helado. y asi seguiria haciendo con cada propiedad. Se suele usar sin poner texto y solo sacando los valores
+ o propiedades que quieras.
+ for (prop in estudiantes) {
+    console.log(prop)
+ }  enlista las propiedades que tenga el objeto, si pones estudiantes[prop], te da los valores de cada prop.
+
+ Metodos: Funciones guardadas en un objeto
+ Sirve para llamar funciones especificas que queremos asociar a un objeto, el console es un metodo.
+
+ Palabra reservada this, cuando la pones, hace que se refiera al objeto que esta guardando la funcion en este caso, por ejempl:
+ tenemos la prop sonido: "hola", despues podemos hacer saludo: function(this.sonido) , y entonces cuando querramos usar el sonido
+ escribimos el nombre del objeto.sonido.
+
+ Objetos funcionales: se crean a partir de funciones y nos permiten denifir moldes para luego realizar copias de nuestros objetos con mismas 
+ propiedades pero distintos valores. Declaras esta funciones dentro de una variable con el nombre que quieras.
+
+ Objetos de clase: Se suele usar con integraciones de otros sistemas que no aceptan objetos, para simular una clase.
+ Se usa la palabra 
+ class mascota {
+    constructor(nombre,familia,raza) {
+        this.nombre = nombre
+        this.familia = familia
+        this.raza = raza
+    }
+ }
+ const rayo = new mascota(rayo, chiuhuahua,algo ma)
+
+
 
 
 
