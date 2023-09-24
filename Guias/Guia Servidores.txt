@@ -1,0 +1,500 @@
+Servidores:
+ El término servidor tiene dos significados en el ámbito informático. El primero hace referencia al ordenador
+ que pone recursos a disposición a través de una red, y el segundo se refiere al programa que funciona en dicho ordenador.
+
+ En consecuencia aparecen dos definiciones de servidor:
+
+ Servidor de Hardware: un servidor basado en hardware es una máquina física integrada en una red informática en la que, 
+ además del sistema operativo, funcionan uno o varios servidores basados en software. Una denominación alternativa para 
+ un servidor basado en hardware es "host" (término inglés para "anfitrión"). En principio, todo ordenador puede usarse 
+ como "host" con el correspondiente software para servidores.
+ 
+ Servidor de Software: un servidor basado en software es un programa que ofrece un servicio especial que otros programas 
+ denominados clientes (clients) pueden usar a nivel local o a través de una red. El tipo de servicio depende del tipo de 
+ software del servidor. La base de la comunicación es el modelo cliente-servidor y, en lo que concierne al intercambio de 
+ datos, entran en acción los protocolos de transmisión específicos del servicio.
+---------------------------------------------------------------------------------------------------------------------------------------
+Como funciona:
+ La puesta a disposición de los servicios del servidor a través de una red informática se basa en el modelo
+ cliente-servidor, concepto que hace posible distribuir las tareas entre los diferentes ordenadores y hacerlas
+ accesibles para más de un usuario final de manera independiente. Cada servicio disponible a través de una 
+ red será ofrecido por un servidor (software) que está permanentemente en espera. Este es el único modo de 
+ asegurar que los clientes como el navegador web o los clientes de correo electrónico siempre tengan la 
+ posibilidad de acceder al servidor activamente y de usar el servicio en función de sus necesidades.
+---------------------------------------------------------------------------------------------------------------------------------------
+Modelo cliente-servidor:
+
+ Servidor web: la tarea principal de un servidor web es la de guardar y organizar páginas web y entregarlas
+ a clientes como navegadores web. La comunicación entre servidor (software) y cliente (navegador) se basa
+ en HTTP, es decir, en el protocolo de transferencia de hipertexto o en HTTPS, la variante codificada. 
+ Por regla general, se transmiten documentos HTML y los elementos integrados en ellos, tales como imágenes,
+ hojas de estilo o scripts. Los servidores web más populares son el servidor HTTP Apache, los servicios de 
+ Internet Information Server de Microsoft (ISS) o el servidor Nginx.
+
+ Servidor de archivos: un servidor de archivos se encarga de almacenar los datos a los que acceden
+ los diferentes clientes a través de una red. Las empresas apuestan por dicha gestión de archivos
+ para que sea mayor el número de grupos de trabajo que tengan acceso a los mismos datos. Un servidor
+ de archivos contrarresta los conflictos originados por las diferentes versiones de archivos
+ locales y hace posible tanto la creación automática de las diferentes versiones de datos como
+ la realización de una copia de seguridad central de la totalidad de datos de la empresa. 
+ En el acceso al servidor de archivos por medio de Internet entran en juego protocolos de 
+ transmisión como FTP (File Transfer Protocol), SFTP (Secure File Transfer Protocol), FTPS
+ (FTP over SSL) o SCP (Secure Copy). Los protocolos SMB (Server Message Block) y NFS (Network File System)
+ se encuentran habitualmente en las redes de área locales (LAN).
+ 
+ Servidor de correo electrónico: un servidor de correo electrónico consta de varios módulos de software
+ cuya interacción hace posible la recepción, el envío y el reenvío de correos electrónicos, así como su
+ puesta a punto para que estén disponibles. Por regla general funciona mediante el protocolo de 
+ transferencia simple de correo (SMTP). Los usuarios que quieran acceder a un servidor de correo 
+ electrónico necesitan un cliente de correo electrónico que recoja los mensajes del servidor y los
+ entregue en la bandeja de entrada, proceso que tiene lugar a través de los protocolos 
+ IMAP (Internet Message Access Protocol) o POP (Post Office Protocol).
+ 
+ Servidor de base de datos: un servidor de base de datos es un programa informático que posibilita
+ que otros programas puedan acceder a uno o varios sistemas de bases de datos a través de una red.
+ Las soluciones de software con una elevada cuota de mercado son Oracle, MySQL, Microsoft SQL Server, 
+ PostgreSQL y DB2. Los servidores de bases de datos ayudan a los servidores web, por regla general,
+ a la hora de almacenar y entregar datos.
+
+ Servidor de juegos: los servidores de juegos son servidores (software) creados específicamente para
+ juegos multijugador online. Estos servidores gestionan los datos del juego online y permiten la 
+ interacción sincrónica con el mundo virtual. La base de hardware de un servidor de juegos se 
+ encuentra en el centro de datos de los proveedores especializados o está disponible en una red
+ doméstica local.
+
+
+ Servidor proxy: el servidor proxy sirve como interfaz de comunicación en las redes informáticas. 
+ En su papel de intermediario, el servidor proxy recibe las solicitudes de red y las transmite a
+ través de su propia dirección IP. Los servidores proxy se usan para filtrar la comunicación, para 
+ controlar el ancho de banda, para aumentar la disponibilidad a través del reparto de cargas, así
+ como para guardar datos temporalmente (caching). Además, los servidores proxy permiten una amplia
+ anonimización, ya que la dirección IP del cliente queda oculta en el proxy.
+
+
+ Servidor DNS: el servidor DNS o servidor de nombres permite la resolución de nombres en una red. 
+ Los servidores DNS son de vital importancia para la red informática mundial (WWW), ya que traducen 
+ los nombres de host como www.example.com en la correspondiente dirección IP.
+
+ En teoría, un único dispositivo físico puede alojar diferentes tipos de servidores. Sin embargo,
+ es habitual alojar cada uno de los servidores en un ordenador independiente o que estos se repartan 
+ en más de un ordenador. De esta manera, se evita que la utilización del hardware de un servicio 
+ repercuta en el rendimiento de otros servicios.
+
+ ¿En qué consiste el alojamiento de servidores?
+ Mientras que a las grandes empresas les sale rentable la adquisición de hardware de servidores, 
+ los autónomos y los particulares que quieren desarrollar proyectos en un servidor propio recurren
+ normalmente al alquiler.
+
+ Los proveedores especializados ofrecen diferentes modelos de servidores de alquiler en los 
+ que los usuarios no tienen que preocuparse por el funcionamiento de la máquina física. La gama 
+ de productos abarca desde servidores dedicados cuyos componentes de hardware se ponen a disposición
+ de los usuarios de manera exclusiva, hasta servicios de hosting compartido para alojar a varios
+  clientes virtuales en una base de hardware común.
+----------------------------------------------------------------------------------------------------------------------------------------
+Servidores Web:
+ ¿Qué es un servidor web?:
+
+ Es un ordenador de gran potencia que se encarga de “prestar el servicio” de transmitir la información pedida
+  por sus clientes (otros ordenadores, dispositivos móviles, impresoras, personas, etc.).
+
+ ¿Alguna vez te has preguntado dónde están localizados todos los contenidos de tu tienda en línea o la estrategia
+  de marketing digital que subes a tu página web?
+
+ Los servidores web son un componente de los servidores que tienen como principal función almacenar, en 
+ web hosting, todos los archivos propios de una página web (imágenes, textos, videos, etc.) y transmitirlos 
+ a los usuarios a través de los navegadores mediante el protocolo HTTP (Hipertext Transfer Protocol).
+
+ ------------------
+ ¿Para qué sirve un servidor web en Internet?:
+
+ El rol principal de un servidor web es almacenar y transmitir el contenido solicitado de un sitio
+  web al navegador del usuario.
+
+ Este proceso no dura más que un segundo, sin embargo, a nivel del web server es una secuencia más 
+ complicada de lo que parece.
+
+ Para cumplir con sus funciones el servidor deberá tener la capacidad de estar siempre encendido 
+ para evitar interrumpir el servicio que le ofrece a sus clientes. Si dicho servidor falla o se apaga, 
+ los clientes tendrán problemas al ingresar al sitio web.
+
+ -------------------
+ ¿Cómo funciona un servidor web?
+
+ La comunicación entre un servidor y sus clientes se basa en HTTP, es decir, en el protocolo de
+ transferencia de hipertexto.
+
+ Para saber cómo funciona, primero es necesario conocer que el web server está permanentemente
+  en espera de una solicitud de información.
+
+ Además, toda computadora, smartphone o tablet tiene una dirección IP única e irrepetible que lo 
+ identifica de otro dispositivo en la red, así es como el servidor web envía la información exacta
+ que el cliente está esperando.
+
+ Ahora bien, para que el web server pueda cumplir con su función es necesario que reciba la petición 
+ por parte de un navegador, en otras palabras, se envía un pedido desde una dirección IP hacia la dirección
+ IP del servidor que aloja los archivos del sitio en cuestión.
+
+ A continuación, el servidor web busca en sus archivos la información que se le está solicitando, procede 
+ a interpretar las líneas de código y a enviar el resultado al navegador cuya dirección IP fue la solicitante.
+
+ Este resultado se le muestra a los clientes y es lo que siempre sucede cuando se navega en sitios de Internet. 
+ Cuando este proceso se completa podemos decir que el web server ha cumplido con su función.
+
+ -------------------
+ ¿Cuáles son las características de un servidor web?
+ Como características necesarias de un servidor web a nivel de software y hardware, podemos encontrar:
+
+ A nivel de software
+ Sistema Operativo
+ Se encarga de que el hardware funcione y logre interactuar con los servicios que corre el sistema.
+  Algunos ejemplos son:
+ 
+ Unix, Linux o Windows.
+ 
+ Sistemas de archivos
+ Es una guía lógica que permite que el sistema pueda ubicar, ordenar y filtrar datos en el disco duro, 
+ con el fin de que podamos leerlos, modificarlos o eliminarlos.
+ 
+ Software servidor HTTP
+ Son los diferentes tipos de servidores web especializados en transmitir el contenido vía
+ web (Apache, Nginx, IIS, Caddy, etc.).
+ 
+ Virtual Hosting
+ Permite que bajo el mismo web server e IP se alojen varios sitios web distintos.
+ 
+ Despacho de ficheros estáticos y dinámicos
+ Los ficheros estáticos brindan soporte para alojar y despachar archivos como:
+ 
+ JPG, GIF, PNG, BMP, CSS, TXT, HTML, Javascript, MP3 y MP4.
+ 
+ Los ficheros dinámicos funcionan para información y se basan en archivos que serán procesados 
+ por el servidor dependiendo generalmente de un lenguaje de desarrollo, por ejemplo: en PHP, ASP, 
+ Python, Ruby y GO.
+ 
+ Monitoreo de Red y Límites
+ Permite monitorear el tránsito de red, paquetes que entran y salen, así como servicios de 
+ sistema y uso de hardware como:
+ 
+ -el uso del Almacenamiento.
+ 
+ -consumo de RAM.
+ 
+ -porcentaje de ocupación del CPU.
+ 
+ -velocidad de la red.
+ 
+ -rendimiento de escritura/lectura en disco.
+ 
+ Sistema de seguridad
+ El sistema de seguridad de un servidor debe:
+ 
+ -imponer límites de acceso por dirección IP;
+ 
+ -denegar o permitirle acceso a ciertos archivos o URLs;
+ 
+ -solicitar usuario y contraseña para autenticación básica HTTP;
+ 
+ -realizar un filtrado de peticiones inseguras;
+ 
+ -dar soporte para despachar información cifrada con certificados de seguridad SSL vía HTTPS.
+
+ A nivel de hardware
+ Rack y gabinete
+ El rack se refiere al lugar donde se alojan los servidores físicamente y el gabinete es el armazón 
+ que sostiene los componentes de hardware de una computadora.
+
+ CPU
+ Es el centro de procesamiento de datos del servidor desde donde se realizan todos los cálculos
+ lógicos y matemáticos para que el usuario pueda manipular y acceder a los datos como necesita.
+
+ Memoria RAM
+ Se utiliza para almacenar información y datos de forma temporal dependiendo de la demanda del 
+ usuario a través del sistema operativo.
+
+ Unidades de almacenamiento
+ El almacenamiento de servidores web se hace en discos duros, los cuales permiten almacenar la
+ información del sistema operativo, los servicios de sistema, y en última instancia los datos cargados por el usuario.
+
+ Puerto de red
+ El ancho de banda es el que te permite tener un volumen suficiente para transmitir información
+ de ida y vuelta hacia y desde tu servidor web.
+ ¿Qué tipos de servidores web existen?
+
+ Existen muchos tipos de servidores web, conoce cuáles son los servidores web más usados en la actualidad:
+
+ Apache
+ Es el más común y utilizado en el mundo, sin embargo, ha perdido popularidad frente a Microsoft IIS y Nginx.
+ 
+ Entre las ventajas de Apache está que es un código abierto, con software gratuito y multiplataforma, y 
+ entre sus desventajas su bajo rendimiento cuando recibe miles de requests (peticiones) simultáneas en procesamiento de contenido dinámico o archivos estáticos.
+ 
+ 
+ Nginx
+ Conocido y popularizado como una de las mejores alternativas de Apache. Nginx es un servidor web de código
+ abierto y gratuito (aunque también existe una versión comercial) que se destaca por su alto rendimiento.
+  
+ Entre sus beneficios resalta una configuración simple, ligera, rápida y excelente en cuanto a seguridad y
+ rendimiento, además permite ser configurado para integrarse nativamente con casi cualquier tecnología y lenguaje de programación moderno.
+ 
+ Como desventajas podemos encontrar que no soporta los archivos .htaccess (de Apache), aunque incluye su 
+ propio lenguaje de rewrites.
+ 
+ LiteSpeed
+ Es un software de despacho HTTP desarrollado por LiteSpeedTech, existe una versión de código abierto 
+ (open source) y una versión comercial que incluye diferentes tipos de licencia.
+ 
+ Algunos de los beneficios de LiteSpeed es que soporta grandes cantidades de conexiones simultáneas
+ con un consumo de recursos realmente bajo (incluso con aplicaciones demandantes como las que utilizan PHP) y a nivel de archivos estáticos está a la altura de Nginx.
+ 
+ Microsoft IIS
+ Internet Information Services o IIS se ha popularizado para ofrecer servicios en la nube, principalmente
+ en Azure (la plataforma de Cloud Hosting de Microsoft).
+ 
+ Además, su perfecta integración con Windows (claro está), Visual Studio y sus herramientas hicieron que 
+ este web server se posicionara como el servidor líder en el mundo empresarial.
+ 
+ Otros servidores web conocidos:
+ Lighttpd, Caddy, Cherokee, NodeJS, Sun Java System Web Server, Google Web Server (GWS)
+
+ Cada servidor web es indicado para ciertas funciones, por lo que escoger cuál vas a usar va 
+ a depender de lo que pretendas hacer con ellos.
+---------------------------------------------------------------------------------------------------------------------------------------------
+Tipos de alojamientos o hostings web: 
+	Un servidor virtual privado (VPS, por sus siglas en inglés) es una partición virtual dentro de un servidor
+	físico que le asigna recursos exclusivos a cada partición. Éstas otorgan acceso raíz que permite instalar
+	un sistema operativo y trabajar con alto grado de libertad.
+	
+	El hosting VPS es uno de los servicios de alojamiento más populares que puedes elegir para tu sitio web. 
+	Utiliza tecnología de virtualización para proporcionar recursos dedicados (privados) en un servidor con 
+	múltiples usuarios.
+	
+	Es una solución más segura y estable que el hosting compartido donde no se obtiene espacio de servidor 
+	dedicado. Sin embargo, es de menor escala y más barato que alquilar un servidor completo.
+	
+	El hosting VPS generalmente es elegido por los propietarios de sitios web que tienen un tráfico de nivel
+	medio que excede los límites de los planes de hosting compartido pero que aún no necesitan los recursos
+	de un servidor dedicado.
+	
+	Las soluciones de VPS generalmente ofrecen varios planes de alojamiento. Por ejemplo, una empresa de 
+	alojamiento, tiene seis planes de hosting VPS que se adaptan a las diferentes necesidades y te permiten 
+	escalar tu sitio sin problemas cuando necesites más recursos.
+	
+	¿Cuándo usar VPS y cómo decidir si es hora de una mejora? ¿Hay alguna alternativa al VPS? ¿Qué es un
+	VPS administrado? En resumen, ¿Qué es un VPS? ¿Cómo funciona el hosting VPS?
+	
+	Un servidor es una computadora en la que tu proveedor de alojamiento web almacena los archivos y las 
+	bases de datos necesarios para tu sitio web. Cada vez que un visitante en línea quiere acceder a tu 
+	sitio web, su navegador le envía una solicitud a tu servidor y transfiere los archivos necesarios a 
+	través de Internet. El hosting VPS te proporciona un servidor virtual que simula un servidor físico; 
+	sin embargo, en realidad, la máquina se comparte entre varios usuarios.
+	
+	Al usar la tecnología de virtualización, tu proveedor de alojamiento web instala una capa virtual sobre 
+	el sistema operativo del servidor. Esta capa divide el servidor en particiones y le permite a cada usuario 
+	instalar su propio sistema operativo y software.
+	
+	Por lo tanto, un servidor privado virtual (VPS) es tanto virtual como privado porque tienes control 
+	absoluto. Está separado de otros usuarios del servidor a nivel del sistema operativo. De hecho, la 
+	tecnología VPS es similar a la creación de particiones en tu computadora cuando quieres ejecutar más 
+	de un sistema operativo (por ejemplo, Windows y Linux) sin tener que reiniciar.
+	
+	Un VPS te permite configurar tu sitio web dentro de un contenedor seguro con recursos garantizados 
+	(memoria, espacio en disco, núcleos de CPU, etc.) que no tienes que compartir con otros usuarios. 
+	Con el hosting VPS, tienes el mismo acceso de nivel raíz que si alquilaras un servidor dedicado, 
+	pero a un costo mucho más bajo.
+	
+	Pros y contras del VPS:
+	El hosting VPS puede ser una solución ideal para ti si es el servicio que realmente necesitas. A 
+	continuación, puedes leer los pros y contras de tener un servidor privado virtual.
+	
+	Pros
+	
+	-Es más rápido y más confiable que un servidor de hosting compartido.
+	
+	-Dado que los recursos del servidor, como la memoria o la potencia de procesamiento, están garantizados, existe una fluctuación de cero a mínima en los recursos disponibles.
+	
+	-Los problemas y aumentos de tráfico de otros usuarios del servidor no afectan a tu sitio.
+	
+	-Obtienes acceso de superusuario (raíz) a tu servidor.
+	
+	-Obtienes mayor privacidad, ya que tus archivos y bases de datos están bloqueados para otros usuarios del servidor.
+	
+	-Es un servicio fácil de escalar. A medida que tu sitio web crece, puedes mejorar fácilmente los recursos de tu servidor (RAM, CPU, espacio en disco, ancho de banda, etc.).
+	
+	Contras:
+	
+	-Es más caro que el hosting compartido.
+	
+	-Se requiere más conocimiento técnico para administrar tu servidor.
+	
+	-Los servidores mal configurados pueden generar vulnerabilidades de seguridad.
+	
+	Comparación de VPS con otros tipos de alojamiento web
+	Los diferentes tipos de alojamiento web te permiten realizar diferentes niveles de
+	personalización en tu servidor. Varían en precio, rendimiento (por ejemplo, tiempo de carga de la página) y 
+	la disponibilidad del servicio (por ejemplo, tiempo de actividad). A continuación, cómo el hosting VPS se
+	compara con otras soluciones de hosting.
+	
+	¿Cuándo usar VPS y cómo decidir si es hora de una mejora?
+	El hosting VPS generalmente se ve como el paso siguiente después de que tu sitio web crezca fuera de los
+	límites de recursos del hosting compartido. Si el plan de hosting web compartido más avanzado ya no es 
+	suficiente para ejecutar tu sitio web sin problemas, vale la pena pasarse a un plan de VPS. En tales
+	casos, el hosting VPS puede proporcionarte lo mejor de dos mundos: hosting compartido y dedicado.
+	
+	Sin embargo, hay otros casos de uso en los que puede ser una buena idea comenzar con un plan de VPS
+	desde el principio. Por ejemplo, los sitios web de comercio electrónico donde se necesita garantizar
+	pagos seguros con un entorno rápido y estable pueden beneficiarse mucho de un servidor privado virtual. 
+	De hecho, si almacenas cualquier tipo de información confidencial o tienes que procesar pagos en línea, 
+	un VPS puede ayudarte a reducir el riesgo de violaciones de seguridad y robo de identidad.
+	
+	Si esperas recibir picos de tráfico en determinados momentos en tu sitio, por ejemplo, en el caso de un 
+	sitio web de planificación de eventos o de venta de boletos, un plan de hosting VPS puede ser un regalo 
+	del cielo. Los servidores de juegos y otros sitios con muchos recursos también pueden ejecutarse con un 
+	rendimiento mucho mejor en un servidor privado virtual.
+	
+	¿Hay alguna alternativa al VPS? ¿Qué es un VPS administrado?
+	Uno de los mayores escollos del hosting VPS es tener que gestionar todo el entorno del servidor por tu 
+	cuenta. Si tu servidor virtual no está bien configurado y mantenido, podrías enfrentarte con serios
+	riesgos de seguridad y de pérdida de rendimiento. Los servicios administrados de hosting VPS han aparecido
+	en el mercado como una solución viable a este problema. Puedes considerarlo como una alternativa mejorada
+	al hosting VPS, que viene con soporte técnico completo.
+	
+	El VPS administrado sigue siendo una novedad en el mercado, sin embargo cada vez más proveedores de
+	hosting lo ofrecen a sus clientes. Por ejemplo, proporcionar un entorno de hosting totalmente administrado
+	con planes de cloud hosting.
+	--------------------
+	Hosting Compartido:
+	El hosting compartido es la solución para los propietarios de sitios web con menos tráfico. Es el punto
+	de partida de la mayoría de las pequeñas empresas y bloggers. Con el hosting compartido, se divide el 
+	mismo servidor físico entre varios clientes de la empresa de hosting. No obtienes recursos dedicados 
+	para ti, ya que tu sitio se ejecuta en el mismo sistema operativo que el de los demás.
+	
+	
+	Por lo tanto, la memoria y el poder de computación que tu sitio puede usar se ven afectados por las 
+	necesidades de los otros usuarios del servicio. Por ejemplo, si hay un pico de tráfico repentino en
+	un sitio web alojado en el mismo servidor, puede aumentar el tiempo de carga de tu página. Tampoco
+	puedes elegir tu sistema operativo ni otro software de servidor, ya que todos los usuarios usan la
+	misma configuración. En definitiva, es tu proveedor de hosting el que se encarga de cada aspecto
+	de tu entorno de hosting compartido.
+	
+	Puedes pensar en hosting compartido como un alquiler en el que compartes el mismo apartamento con varios
+	compañeros. El hosting VPS sigue siendo una solución compartida, sin embargo, cada quien tiene su propio 
+	cuarto donde pueden personalizar el espacio de acuerdo a sus necesidades. Por ejemplo, pueden elegir la
+	pintura, los muebles, la decoración, etc.
+	-----------------
+	Hosting WordPress:
+	El hosting WordPress es un servicio específicamente ofrecido para los propietarios de sitios de WordPress.
+	Viene con varias características relacionadas con WordPress que sólo puedes usar si tienes un sitio de 
+	WordPress, como instalación con un solo clic, plugins preinstalados o una interfaz de línea de comandos 
+	de WP. Los servidores están configurados para las necesidades de WordPress. Por lo tanto, los proveedores
+	de hosting ofrecen hosting para WordPress como parte de su servicio de hosting compartido.
+	
+	Aunque también es posible configurar un sitio de WordPress en un servidor privado virtual, no puedes 
+	obtener acceso a los servidores personalizados que se han configurado con WordPress en mente. Sin embargo, 
+	si aún eliges VPS para tu sitio de WordPress, puedes configurar tu entorno de alojamiento según las 
+	necesidades de tu negocio.
+	----------------
+	Hosting dedicado:
+	Con hosting dedicado, alquilas un servidor físico completo para tu negocio. Si tienes un sitio web de alto tráfico, 
+	el hosting dedicado puede ser la mejor solución para ti, ya que los servidores dedicados son rápidos, flexibles y
+	totalmente personalizables. Sin embargo, el servicio también viene con un precio, por eso no es la mejor solución
+	para todos, especialmente si tienes un sitio web pequeño o mediano.
+	
+	Si bien el hosting VPS te permite elegir y configurar tu sistema operativo y aplicaciones del servidor, el
+	hosting dedicado va un paso más allá. No solo te permite configurar el software sino también el hardware, 
+	ya que todo el servidor es tuyo y nadie tiene voz en cuanto a la configuración. También puedes ejecutar un 
+	servidor dedicado en el sitio (por ejemplo, en tu oficina), sin embargo, no obtendrás el apoyo de un equipo 
+	de hosting profesional en ese caso.
+	
+	-------------
+	Cloud Hosting:
+	
+	Con el cloud hosting o hosting en la nube no usas un solo servidor, sino un clúster (varias computadoras 
+	interconectadas) que se ejecuta en la nube. Cada servidor en el clúster almacena una copia actualizada de
+	tu sitio web. Cuando uno de los servidores está demasiado ocupado, el clúster redirige automáticamente el 
+	tráfico a uno que no lo esté tanto. Como resultado, el hosting en la nube no tiene tiempo de inactividad 
+	(downtime), ya que siempre hay un servidor en el clúster que puede atender las solicitudes de los visitantes
+	de tu sitio web.
+	
+	El alojamiento en la nube y el alojamiento VPS no son mutuamente excluyentes. En cambio, muchas empresas
+	de hosting ofrecen alojamiento VPS en una infraestructura en la nube. La combinación de VPS con las
+	tecnologías en la nube conduce al rendimiento y la confiabilidad más altos posibles en el entorno del
+	servidor virtual.
+	
+	Algunos servicios de cloud hosting conocidos son:
+	
+	AWS - Amazon Web Services
+	AWS ofrece varios servicios de servidor web, incluyendo Amazon Elastic Compute Cloud (EC2), Amazon 
+	Lightsail y AWS Elastic Beanstalk. EC2 es una opción popular para lanzar y administrar servidores
+	virtuales en la nube, mientras que Lightsail es una opción más sencilla y con un conjunto fijo de recursos. 
+	Elastic Beanstalk, por su parte, es una opción de plataforma como servicio (PaaS) que permite a los 
+	desarrolladores cargar y ejecutar sus aplicaciones web sin preocuparse por la infraestructura 
+	subyacente donde destacamos:
+	
+	Amazon Lightsail
+	Es un servicio de AWS (Amazon Web Services) que permite a los usuarios lanzar fácilmente un servidor 
+	web en la nube con un conjunto fijo de recursos (por ejemplo, CPU, RAM, almacenamiento).
+	
+	Google Cloud Platform (GCP)
+	El servicio de servidor web de GCP se llama Google Compute Engine, que permite a los usuarios lanzar y 
+	administrar máquinas virtuales en la nube con diferentes opciones de sistema operativo, incluyendo Ubuntu, 
+	CentOS y Debian. Google también ofrece su propia plataforma de aplicaciones web llamada Google App Engine, 
+	que permite a los desarrolladores crear y alojar aplicaciones web de forma escalable y sin preocuparse por 
+	la infraestructura subyacente.
+	
+	Microsoft Azure
+	El servicio de servidor web de Azure se llama Azure App Service, que permite a los usuarios alojar 
+	aplicaciones web y móviles escalables en la nube. Azure también ofrece opciones para lanzar y administrar 
+	servidores virtuales, como Azure Virtual Machines, que permite a los usuarios seleccionar entre diferentes 
+	opciones de sistema operativo y configurar la infraestructura según sus necesidades.
+	
+	Otros proveedores
+	Existen muchos otros proveedores de servicios de cloud hosting populares que ofrecen diversas opciones 
+	para alojar y administrar aplicaciones y servicios en la nube. A continuación, se mencionan algunos de 
+	los proveedores más populares en la actualidad:
+	
+	DigitalOcean: Ofrece servidores virtuales (droplets) de alta calidad y asequibles, con una variedad de 
+	opciones de sistema operativo y recursos escalables.
+	
+	Heroku: Es una plataforma de alojamiento de aplicaciones que permite a los desarrolladores cargar, 
+	ejecutar y escalar aplicaciones web sin preocuparse por la infraestructura subyacente.
+	
+	IBM Cloud: Ofrece una amplia gama de servicios de infraestructura en la nube, incluyendo opciones para 
+	servidores virtuales, contenedores, almacenamiento y bases de datos.
+	
+	Oracle Cloud Infrastructure: Proporciona una amplia gama de opciones de infraestructura en la nube, 
+	incluyendo servidores virtuales, contenedores, almacenamiento y bases de datos, con un enfoque en la 
+	seguridad y el rendimiento.
+	
+	Alojamiento Cloud para Sitios Estáticos
+	Netlify y Vercel son proveedores de servicios de alojamiento de sitios web estáticos, que se consideran 
+	una categoría especializada de servicios de cloud hosting. Estos servicios se centran en alojar y 
+	distribuir sitios web estáticos, que son sitios web sin bases de datos ni contenido generado dinámicamente. 
+	Los sitios web estáticos se generan a partir de archivos HTML, CSS y JavaScript y son útiles para sitios 
+	web simples y rápidos que no necesitan una infraestructura de backend compleja.
+	
+	Netlify y Vercel ofrecen una amplia gama de características y herramientas para alojar, construir, implementar 
+	y gestionar sitios web estáticos. Estas herramientas incluyen integración con repositorios de control de 
+	versiones como Git, compilación automática de sitios web, integración de CDN y HTTPS, y muchas otras 
+	características que facilitan el proceso de implementación de sitios web estáticos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

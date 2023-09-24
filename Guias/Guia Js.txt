@@ -156,7 +156,14 @@ Operadores:
         https://app.code2flow.com/ Convierte código en flujo, linea por linea, podes usarlo pa probar cosas de if.
 	    Son caracteres especiales reservados para modificar, comprobar, asignar o reasignar los datos guardados en variables,
 		Aritméticos: Suma +, resta -, multiplicación *, división /, resto % y potencia ** (X elevado a algo)
-		El símbolo de + también se usa en los strings para concatenar cosas, pero es mejor usar backticks.
+		El símbolo de + también se usa en los strings para concatenar cosas, pero es mejor usar backticks:
+        const name = 'Gerardo';
+        const surname = 'Fernández';
+        const telephone = '123 123 123';
+        // "Old syntax"
+        const userInfo = 'User info: ' + name + ' ' + surname + ' ' + telephone;
+        // "New syntax"
+        const userInfo = `User info: ${name} ${surname} ${telephone}`;
 		
 		
 		Asignación: le dan un nuevo valor a alguna variable después de hacerle una operación el resultado que guarde va a reemplazar el anterior, si 
@@ -350,28 +357,40 @@ Funciones:
 	} Búscate una explicación alguna vez en Google, ta medio falopa.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 Objetos: 
-
+ Tipo de dato que nos permite crear colecciones de variables.
  Literales:
  Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor.
- A cualquier variable lo podes convertir en objeto y a cualquier objeto en variable. Y a los objetos podes ponerle todas las propiedades que quieras.
+ ej: Const superheroe = {alias: "superman" , nombre: "ClarK"}, las propiedades aca serian las claves "alias" y "nombre"
+ y sus valores "superman" y "clark" respectivamente.
+ A cualquier variable lo podes convertir en objeto y a cualquier objeto en variable. Y a los objetos podes ponerle todas las 
+ propiedades que quieras.
  Declaras la variable, el nombre y = {}  (unas llaves vacias en principio, ahi va a tener datos del objeto),
- Los objetos tienen propiedades, que son definidas mediante comas, la nombre, dos puntos, y ahi un string, estas van encerradas en las llaves.
+ Los objetos tienen propiedades, que son definidas mediante comas, la nombre, dos puntos, y ahi un string, estas van encerradas 
+ en las llaves.
  Cada propiedad posee atributos propios:
- valor: que es lo que solemos usar, 
- configurable: nos permite definir si los atributos va a poder ser modificados
- Enumerable: Controla si la prop va a ser mostrada cuando se enumeren las props del objeto,
-  writable: Nos permite denifir si el valor de una prop va a poder ser modificado o no.
 
+ valor: que es lo que solemos usar.
+
+ configurable: nos permite definir si los atributos va a poder ser modificados
+
+ Enumerable: Controla si la prop va a ser mostrada cuando se enumeren las props del objeto,
+
+ writable: Nos permite denifir si el valor de una prop va a poder ser modificado o no.
+
+Leer los valores: 
+(objeto.clave) te devuelve el valor al que te estes refiriendo
+(objeto["propiedad"]) tambien funca igual.
   Para acceder a los atributos usamos: 
   Object.getOwnPropertyDescriptor(targety, propiedad), Con esto, en targety buscas el nombre del objeto, y en propiedad, nombras como string la el valor que 
   queres que tiene el objeto. Esto te va a enlistar las propiedades de ese valor.
 
  Object.defineProperties(myObj,propiedad, {atributos}) : Con esto, myObj elegis el objeto, propiedad,
 
- object.key(objeto): devuelve un las valroes y propiedades del objeto que pongas entre parentesis, sirve para contar sus valores o objetos, cuando
- pedis info a una base de datos, y si te responde un objeto, podes mostrar la info con esto.
+ object.key(objeto): Devuelve un arreglo que contiene todos
+ los nombres de las propiedades
 
- object.values: googlea
+ object.values: Devuelve un arreglo que contiene todos
+ los valores correspondientes a las propiedades.
 
  Una vez generado el objeto, podes llamarlo para ver sus propiedades y valores. Ahora, si queres buscar algo especifico dentro de un objeto, 
  lo podes buscar especificando la prop, ej: Un objeto llamada menu y queres buscar postres digamos: "menu.postres", eso te va a devolver
@@ -385,6 +404,8 @@ Objetos:
  borrar la prop de la nota del estudiante, haces: delete estudiante.nota  , asi, ya es eliminada junto con su valor. 
 
  For...in: Es un bucle especifico para recorrida de objetos, se fija cuantos pares hay.
+ Basicamente, for in es una funcion que va a hacer algo que quieras, lo que escribas dentro, a cada uno de las propiedades del 
+ objeto elegido. En el ejemplo, para cada prop del "objeto", le esta pidiendo que imprima las claves = valores.
  for (const prop in objeto) {
     console.log(`obj.${prop} = ${obj[prop]}`)  
  } Produce las props y valores. 

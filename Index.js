@@ -44,6 +44,12 @@ function prueba() {
 	}
 	} */
 
+const nuevoEstudiante = (nombre, nota) => {
+	this.nombreEstudiante = nombre;
+	this.notaEstudiante = nota;
+}
+
+
 function nuevoEstu(nombre, nota) {
 	this.nombreEstudiante = nombre
 	this.notaEstudiante = nota

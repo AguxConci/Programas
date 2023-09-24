@@ -135,3 +135,18 @@ a:link{
 #Rey:hover{
   width: 100px;
 } */
+/* Estilo predeterminado del botón */
+.boton {
+  width: 100px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  transition: transform 0.3s; /* Agrega una transición suave de 0.3 segundos */
+}
+
+/* Estilo cuando el mouse está encima */
+.boton:hover {
+  transform: rotate(180deg); /* Rota el botón 180 grados cuando el mouse está encima */
+}
