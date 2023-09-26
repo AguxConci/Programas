@@ -377,9 +377,9 @@ Objetos:
 
  writable: Nos permite denifir si el valor de una prop va a poder ser modificado o no.
 
-Leer los valores: 
-(objeto.clave) te devuelve el valor al que te estes refiriendo
-(objeto["propiedad"]) tambien funca igual.
+ Leer los valores: 
+ (objeto.clave) te devuelve el valor al que te estes refiriendo
+ (objeto["propiedad"]) tambien funca igual.
   Para acceder a los atributos usamos: 
   Object.getOwnPropertyDescriptor(targety, propiedad), Con esto, en targety buscas el nombre del objeto, y en propiedad, nombras como string la el valor que 
   queres que tiene el objeto. Esto te va a enlistar las propiedades de ese valor.
@@ -440,7 +440,168 @@ Leer los valores:
     }
  }
  const rayo = new mascota(rayo, chiuhuahua,algo ma)
+----------------------------------------------------------------------------------------------------------------------------------------
+Arrays:
+	Son colecciones de datos en formato de matriz o vector, nos permiten agrupar conjuntos de valores relacionados en una misma 
+	variable. Un arreglo simple no tiene nombre como los objetos, sino que una posicion en el vector o matriz, lo mas comun suele
+	ser objetos dentro de arreglos, y sirven para poner datos de forma secuencial. Son estructuras dinamicas que se pueden ir cambiando
+	y arreglando cuando quieras.
+	Una de las propiedades de los arrays es length, la cantidad de datos que tengo, (cardinal), siempre teniendo en cuenta que si tiene 10 obejtos,
+	entonces va a tener 9 indices, porq el primero es 0. 
+	Cuando busques con indexOf(valor), esto nombre.indexOf(segundo) ---> te devuelve "segundo", bueno, si le pedis un valor que no esta dentro, te 
+	va a devolver el valor de -1.
+	
+	Estructura: const nombre = ["primerdato","segundo","tercero"] 
+	Aca es con strings, pero puede tener cualquier dato.
+	Las posiciones se conocen como indice, y SIEMPRE comienza desde 0, el primerdato esta en la posicion 0.
+	
+	Para hablar de un dato, ej: console.log(nombre[segundo]); esto imprime "segundo"
+	
+	recorrer arreglo:
+	ej: frutas.forEach(function(dato){
+		console.log(dato)
+	})
+	ej: frutas.forEach(dato => console.log(dato))
+	
+	Estas dos son exactamente la misma funcion, una normal y la otra en function.
+	
+	Cambiar valor:
+	nombre[segundo] = banana, entonces ahora en el array, donde iba "segundo" ahora va a decir banana.
+	
+	Array Methods: Son funciones nativas, cuando generas un arreglo, automaticamente se comporta como un objeto, y al ser asi, tiene las funciones nativas, que se llaman
+	metodos.
+	
+	Añadir o eliminar datos:
+	push(): agrega un valor al final y retorna
+	el nuevo length.(te devuelve la longitud nueva con el valor)
+	
+	unshift(): agrega un valor al principio y
+	retorna el nuevo length.
+	
+	pop(): elimina el último valor y lo
+	retorna.(te devuelve el valor que elimino)(una accion recurrente es guardar la info que eliminaste declarando como variable let pop(), y eso te guarda
+	el dato que hayas eliminado, y despues podes agregarlo con push.)
+	
+	shift(): elimina el primer valor y lo
+	retorna.
+	
+	Concatenar elementos: Nos permite combinar arrays o crear cadenas de texto de los valores de un mismo array:
+	
+	concat(): combina 2 o más arrays
+	pasados por parámetro.
+	
+	ej: let precioRemeras = [100,200]
+		let precioMedias = [50,40]
+		const precios = precioRemeras.concat(precioMedias)
+		console.log(precios) ----> devuelve [100,200,50,40]
+	
+	join(): crea una cadena de texto a partir de todos
+	los valores de un array. Recibe por parámetro un
+	separador de elementos de forma opcional.(El parametro va a ser lo que queres que este en medio de cada string, puede ser un guion, un punto, nada.etc.)
+	
+	Separar o cortar:
+	
+	split(): creamos un array a partir de una
+	cadena de texto.
+	El parámetro es la condición que
+	separa a los elementos en la cadena. (Si tenes un texto, pones que simbolo queres que sea el que divida, y entonces eso va a dividir el texto en base a 
+	lo que hayas puesto, por ej: precios.split(","), entonces digamos que "precios" tiene un texto, puede ser una variable o cualquier string, entonces
+	donde haya comas, va a separar cada segmento en un valor para un array, digamo precios = esto,es,un,texto ---> [esto,es,un,texto].
+	Si separa con nada (""), separa caracter a caracter.)
+	
+	slice(): devuelve una porción del array desde
+	un rango definido.
+	Por parámetro pasaremos la posición inicial
+	y final de los elementos a cortar. (Le aclaras en cual indice empezar y en cual terminar(excluyente el segundo), saca especificamente estos, y no 
+	te desarma el array original, sino que creo uno nuevo con los elementos que hayas sacado.)
+	
+	splice() : le digo que valor quiero sacar aclarando su indice, y el segundo valor es cuantas posiciones queres que borre de tu original, y podes poner
+	un tercer parametro que dice que info queres que pongas, podes escribir tantos parametros como quieras al final.
+	Sirve para agregar cosas donde quieras, si pones (1,0,"algo","cosa"), elegiste que en el indice 1, elimines 0 cosas, osea que no saca el elemento, y parado
+	ahi, mete "algo" y "cosa".
+	
+	Ordenar:
+	sort(): array.sort() ordena alfabeticamente los elementos del array.
+	Si queres usarlo para ordenar numeros de menos a mayor, sort no funca del todo, porq tomaria que 10 y 100 van uno al lado, porq tienen 1 y 0, es como a y b.
+	Para eso podemos hacer : precios.sort((a, b) => a- b); Entonces, esto basicamente dice que si es verdadero, lo pone, si es falso, lo mueve y asi.(medio rari)
+	
+	Array functions:
+	
+	Son metodos de array que originalmente recibeun una funcion de callback por parametro para obtener cierto resultado:
+	ForEach(): Recorre automaticamente cada uno de los datos de los array, y ejecuta lo que vos quieras por cada dato.
+	ej: frutas.forEach(dato => console.log(dato)). Esto imprime todos los datos del array.
+	
+	Validadores: Son dos "If" concatenados, el every() es que TODOS los datos cumplan la condicion, mientras que some() solo pide que UN dato cumpla.
+	every(): verifica si todos los elementos en
+	el arreglo pasan la prueba implementada
+	por la función dada.
+	
+	some(): verifica si al menos uno de los elementos
+	en el arreglo pasan la prueba implementada por
+	la función dada.
+	
+	const todosPrecios = precios.every(function(dato){
+		dato > 6
+	}) 
+	const todosPrecios = precios.every(dato => dato > 100)
+	console.log(todosPrecios)
+	
+	reduce(): reduce(): se ejecuta por cada elemento del array y va acumulando en una variable el
+	valor anterior sumando el valor actual de esa iteración.
+	
+	recibe 2 valores, total, que acumula, y value, que indica otro valor, (googlea):
+	precios = [1,2,3,4,5,6]
+	
+	const sum = precios.reduce((total,value) => total + value, 0)
+	console.log(sum) --> Devuelve 21 (1+2+3+4+5+6), justo en este caso es asi.
+	
+	map(): Recorre un arreglo y le mete un cambio que es un callback (funcion como parametro), y despues con eso crea un array nuevo con los datos cambiados
+	de esa forma: Digamos que es un array al que le inyectas la funcion que pinte, es SUPER IMPORTANTE.
+	
+	Filter(): Filtra lo necesario basado en una condicion y te devuelve un array nuevo
+	filter(): filtra los elementos que cumplen cierta condición. Podríamos usarlo cuando
+	tenemos un array y necesitamos filtrar datos.
+	
+	find(): busca en un arreglo según una condición y devuelve el primer valor que logre
+	cumplirla. 
+	
+	Matrices: Simula base de datos por asi decirlo, sirven para crear conjuntos de colecciones de datos, y se van dividiendo por bloques o filas.
+	Podes verlo como qwue cada bloque puede tener muchos datos, y asi cada uno es un como una lista de obejtos que pueden ser datos personales.
+	let miembros = [
+		{
+			dni:999999
+			nombre: "juan"
+		},
+		{
+			dni: 8888888
+			nombre: "dolores"
+		},
+	]
+	y asi tenes dos bloques dentro de un arreglo.
+	
+	Un buen ejemplo puede ser:
+	para verificar una condicion, en cualquier tipo de funcion, podes poner que un usuario pide dni:
+	
+	miembros.forEach(usuarrio => {
+		if (documento == miembros.dni){
+			return true
+		}
+	})
+	
+	bla bla bla, basicamente, esa condicion va a recorrer el array de miembros, y va a fijarse el dni de cada bloque que haya, asi si coincide con tu pseudo base
+	de datos, entonces te lo toma por bueno.(Despues si queres hacer eso, fijate ma o menso como es, no confio en que funque bien ese codigo.)
 
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
