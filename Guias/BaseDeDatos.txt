@@ -1,0 +1,166 @@
+MYSQL CHEATSHEET ONLINE, buscalo.
+
+
+Que es un dato?
+Cualquier informacion que refleja una caracteristica de un objeto, pueden representaciones concretas o abstractas.
+Base de datos:
+Conjunto de datos almaenados y organizados que pueden estar o no relacionados entre si. Por un lado esta la informacion 
+volatil, que es la que deja de existir despues de ciertas acciones, como cuando hacemos una pagina y la reiniciamos sin 
+guardar nada, mientras una base de datos es una estructura de permanencia de datos, que organizan, guardan y mantienen
+datos.
+
+Tipos de BBDD:
+Relacional:
+Los datos pertenencen a entidades, donde cada uno puede estar relacionado a otro dato o entidad diferente. Estas entidades
+se organizan como un conjunto de tablas con columnas y filas donde las columnas son propiedades de la entidad y las filas
+se componen de los distintos valores de cada propiedad. Utiliza lenguaje SQL. Sirve para hacer busquedas por relaciones.
+
+No Relacional:
+Es un enfoque diferente, donde cada entidad es un objeto independiente con sus propiedades, atributos y valores.
+No requieren una estructura definida ni muy diseñada ya que nuestros datos no van a estar relacionados entre si.
+Se las conoce como bases de datos NoSQL.
+
+SQL: Structured Query Language: 
+Se puede utilizar MySQL desde CLI: MySQL Shell, o GUI: MySQL Workbench, HeidiSQL, PhpMyAdmin. (recomendable Workbench(??))
+El lenguaje de datos mas conocido y utlizado de todos. Es un lenguaje estandar para el manejo de info desde una base
+de datos relacional. Se utiliza a traves de un SGBD (sistema gestor de base de datos) que hacen su propia implementacion
+de lenguaje SQL. Te permite trabajar con una base de datos, comunicando algo.
+
+Sistemas Gestores de BBDD: 
+Las bases de datos funcionan mediante gestores de bases de datos, diseñados para almacenar, gestionar y compartir 
+informacion de manera eficiente. Estos existen tanto para BBDD relacionales (MySQL, Postgre, SQL Server, MariaDB) como
+No relacionales (MongoDB, redis).
+
+Conceptos Basicos:
+
+Entidades: 
+Tambien conocidas como tablas.
+Representan cosas u objetos (ya sean reales o abstractos) que se diferencian claramente entre si, estas entidades
+se representan en diagramas entidad/relacion. Son una especie de cuadros conectados entre si, cada cuadro es una
+entidad, y las conexiones representan las relaciones, y la union o relacion significa como es la relacion, como
+seria ciudades y paises, hay una conexion, que dice que una ciudad tiene un pais pero un pais puede tener muchas 
+ciudades.
+
+Atributos: 
+Tambien conocidos como columnas.
+Son caracteristicas definidas de un objeto o entidad. Hay que abundar mas en eso.
+
+Registro: 
+Tambien conocidos como filas.
+Son el registro de los datos de un objeto.
+
+Basicamente, te metes a una entidad, y es una grilla de columnas que son cada propiedad y cada fila, el objeto
+y con sus datos asignados.
+
+Tipos de datos 
+numericos: 
+Hay que decirle que tipos de datos son, que cambia el rango de valores a utilizar y cuanto va a ocupar cada uno 
+de esos datos, por ejemplo, tinyint, tiene un rango de 0 a 255, por cada celda dentro de una columna que use 
+un tinyint, voy a usar 1 byte de espacio. Se suele usar int que tiene un rango de -2 a la 31 a 2 a la 31- que 
+ocupa 4 bytes, y FLOAT(n), que puede ser para exponenciales o cosas ase.
+
+Alfa-numericos:
+Char(n): almacena de 1 a 255 caracteres alfanumericos, este valor viene dado por N, y es el tamaño utilizado en disco
+para almacenar dato. Es decir si definimos un campo como char(255), el tamaño real del campo sera 255, aunq el valor
+solo contenga 100, porque va a guardar 255 espacios, los no usados van a estar en blanco, y pesa de 0 a 255 bytes.
+
+Varchar(n): Igual que char, pero almacena unicamente los bytes que contenga el valor del campo. peso de 0 a 255,
+evita los espacio en blanco de char.
+
+Fecha:
+Van a tener rango de valores de dias, meses y años, y cambia la precision para la bitacora, que si se usa una base 
+de datos que sea cambiada de forma constante, entonces necesitas que el cambio se registre con mas precision para 
+saber que paso antes y despues, y no haya errores, hay precision baja desde 1 dia, hasta de 100 nanosegundos, y 
+mas precision pesa mas.
+
+Constraints o Restricciones: 
+Se utilizan para limitar o establecer distintas caracteristicas de un dato en una tabla.
+NOT NULL: el valor de ese campo no acepta ser nulo o vacio.
+UNIQUE: El valor de ese campo no puede repetirse en la misma columna (ej DNI)
+DEFAULT: Valor por defecto si no se ingresa ningun valor.
+PRIMARY KEY: Identifca de forma unica cada fila de tabla, esta va a ser la que identifique la parte unica de una entidad, 
+buscar el dni, se usa para la columnas con datos especificos que no se suelen repetir, como los dni.
+FOREIGN KEY: Identifica la relacion entre los campos de diferentes tablas. Busca mejor que hace, relaciona tablas.
+
+Lenguaje DDL:
+DDL MANEJA ESTRUCTURA
+DML MANEJA DATOS
+DSN MANEJA SEGURIDAD
+En SQL hay tres lenguajes, y DDL es data definition language, que es para crear, alterar o eliminar la estructura de los
+datos de la tabla.
+CREATE: Crear una BBDD, tablas, vistas, etc.
+ALTER: Modificar la estructura, ej, añadir o borrar columnas de una tabla.
+DROP: Eliminar los objetos de la estructura,ej, un indice o una secuencia (?
+TRUNCATE: Elimnia los datos de una tabla pero no la tabla.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Podes probar  todo esto en phpMyAdmin que esta online.
+
+Crear base de datos: 
+tenes que estar en un cliente que use SQL.
+CREATE DATABASE nombre;  puede fallar si la tabla ya existe, para eso podes usar IF NOT EXIST entre Databse y nombre:
+CREATE DATABASE IF NOT EXIST nombre;
+
+Eliminar BBDD:
+DROP DATABASE nombre; la matas y perdes todos los datos de esta tabla.
+DROP DATABASE IF EXIST nombre;
+
+Seleccionar BBDD:
+USE nombre;
+
+Crear Tabla/entidad:
+CREATE TABLE nombreBBDD.nombreTabla (   (Para crear la tabla dentro, pones el nombre de la BBDD. y el nombre nuevo, es como un objeto.
+sino, podes seleccionar la BBDD antes usando el USE, asi no aclaras eso.)
+
+id int primary key auto_increment,
+usuario varchar(12) not null,
+nombre varchar(15) not null,
+edad tinyint not null
+
+) ;
+
+la primer celda/atributo/columna se llama id, la segunda usuario, tercera nombre, cuarta edad.
+Id va a ser un int que es interger--> Numero entero, tambien va a ser primary key, o llave principal y es auto incrementado, cada vez
+que creas un usuario, este crea un numero que le corresponde, auto incremental hace que siempre que se cree uno, se le sume uno, por
+tanto no se van a repetir los id con esa caracterista.
+Usuario  va a ser un varchar(12), no puede tomar null
+nombre va a ser un varchar(15), no puede tomar null
+edad va a ser un tinyint
+
+Comandos basicos:
+Modificar tabla:
+ALTER TABLE nombreTabla CHANGE name otraCosa;  Esto cambia el nombre de una fila llamada name, y se pasa a llamar otraCosa.
+tambien podes cambiar el tipo de dato y todos los detalles como null, incremental y eso.
+
+ALTER TABLE nombreTabla ADD apellido varchar(15); agrega(?)
+
+Vaciar tabla:
+TRUNCATE nombreTabla;
+
+Mostrar columnas:  Te muestra la info especifica, no los datos, sino los detalles como nun incremental, que tenga.
+DESCRIBE nombreTabla;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DML:data manipulation language
+Es un conjunto de palabras claves utilizadas para manipular la estructura que almacenan los datos. Las sentencias DML
+son aquellas utilizadas para insertar, modificar y consultar los datos de una tabla.
+Sentencias:
+insert,select,update,delete.
+Todo dentro de la tabla elegida.
+
+
+
