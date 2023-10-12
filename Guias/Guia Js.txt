@@ -590,6 +590,65 @@ Arrays:
 	
 	bla bla bla, basicamente, esa condicion va a recorrer el array de miembros, y va a fijarse el dni de cada bloque que haya, asi si coincide con tu pseudo base
 	de datos, entonces te lo toma por bueno.(Despues si queres hacer eso, fijate ma o menso como es, no confio en que funque bien ese codigo.)
+----------------------------------------------------------------------------------------------------
+DOM: 
+		Peticion http
+		Es la manera como un navegador le pide la info a un servidor, el link del navegador seria un link que es
+		una peticion, y despues en base a esa direccion, te llegan archivos html, css, js, ase.
+
+		AJAX: Asynchronous javascript and XML
+		es una modalidad para solicitar info que luego pueda ser añadida a nuestra pagina sin tener que recargar
+		manda un pedido interno de la pagina dentro del formal xml al servidor, y que este responda, pa escribir
+		lo que necesites sin tener que recargar la pagina. Hoy en dia no se usa mucho.
+
+		realizar peticiones a ajax:
+		XMLHttpRequest: metodo mas antiguo y no usado 
+		Librerias de terceros: Una libreria con otros metodos no-nativos que utilizan plantillas, en vez de
+		escribir todo lo necesario del XMLhttp, solo escribias unas pocas, el resto lo ponia la libreria.
+		Fetch: Parte de los metodos nativos del WEB API,(cliente),  desde Node +18, se puede usar de forma
+		nativa.
+
+		JSON: Notacion javascript Object Notation, tiene formato de objeto, se pueden hacer matrices, arrays
+		y todo dentro de todo, es facil de leer y escribir, y tambien es un archivo de texto, por tanto, 
+		json es un *ser superior*. Dato extra, al ser solo texto, super liviano.
+
+		REST API:
+		Peticion simple con Fetch:
+
+		promesa traidicional:
+		const baseURL = "link"
+
+		fetch(baseURL*"/character") 
+		.then(res => res.json())   Este metodo de json traduce la respuesta a un objeto de Javascript.
+		.then(data => console.log(data))
+		.catch(err => console.log(err))
+
+
+		le pedis a fetch que te busque la info en la base de datos.
+
+		async/await
+		const baseURL = "link"
+
+
+		Pedir lo datos
+
+		BUSCA TODO EN API ONLINES
+		rapidapi
+		pokeapi
+		rickandmortyapi
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -59,7 +59,16 @@ const Juan = new nuevoEstu("Juan", 9)
  // Esta es la funcion para crear objetos moldes, van a tener esas propiedades, y despues creas la variable segun el estudiante nuevo que quieras
   // agregar, y asi podes hacer otra funcion que cree objetos con nombre.
 
-	
+setTimeout(() => {
+	console.log("hola despues de 3 segundos")
+
+}, 3000)
+setInterval(() => {
+	console.log("hola despues de 3 segundos")
+
+}, 3000)
+
+
 
 	
 	

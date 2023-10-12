@@ -11,13 +11,13 @@ html {
   }
 }*/
 
-.flex {
+/* .flex {
   background-color: skyblue;
   display: flex;
   border-radius: 30px 5px;
   flex-flow: row wrap;
   /* flex-direction: row; 
-  flex-wrap: wrap; /*Esto permite que los flex ocupen otra linea*/
+  flex-wrap: wrap; /*Esto permite que los flex ocupen otra linea
   gap: 10px 10px;
   justify-content: space-around;
   align-items: end;
@@ -25,38 +25,35 @@ html {
 }
 .flex-item-10 {
   background-color: red;
-  margin: 10px; /*margin es el espacio entre bloques*/
+  margin: 10px; /*margin es el espacio entre bloques
   padding: 20px;
   text-align: center;
   width: 300px; 
-  /* flex-grow: 2;*/
+  /* flex-grow: 2;
   
 }
 .flex > div {
   background-color: red;
-  margin: 10px; /*margin es el espacio entre bloques*/
+  margin: 10px; /*margin es el espacio entre bloques
   padding: 20px;
   text-align: center;
-  width: 30px; /* Automáticamente les baja el tamaño a los div para que entren bien en la pantalla*/
+  width: 30px; /* Automáticamente les baja el tamaño a los div para que entren bien en la pantalla
 
-}
-.grid {
+} */
+
+/* .grid {
  display: grid;
  background-color: violet;
  height: 600px; /*tamaño grilla*/
       /* grid-template-columns: 1fr 2fr 3fr;
-      grid-template-rows: 100px 100px 100px;*/
+      grid-template-rows: 100px 100px 100px;
  grid-template-columns: 2fr 3fr 4fr 1fr;
  grid-template-rows: 2fr 2fr 3fr 3fr;
  gap: 40px;
  grid-column-start: ;
 
- 
-
-
   
-  
-}
+} */
 
 .grid1 {
   grid-column: 1 / 3 ;

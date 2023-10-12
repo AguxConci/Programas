@@ -1,6 +1,4 @@
-CSS: Pintar la casa:
-
- Teorica MUY basica: 
+Teorica MUY basica: 
     Un codigo de css normal consta de:
     selector: Dice a que elemento te dirigis.
     property: Las diferentes caractiristcas que podes poner (font,color,background,etc)
@@ -109,6 +107,12 @@ Selectores:
     ::marker	::marker	Selects the markers of list items
     ::selection p::selection	Selects the portion of an element that is selected by a user
 -----------------------------------------------------------------------------------------------------------------------------
+Nombrado de clases:
+BEM, block-element-modifier, tenes un bloque, le pones una clase y a los hijos del 
+bloque le pones la clase del bloque mas el nombre del element:
+<nav class="navbar"> <ul class="navbar__menu"> <a class="navbar__link">
+
+-----------------------------------------------------------------------------------------------------------------------------
 background:
     background-color
     background-image --> url()
@@ -117,6 +121,72 @@ background:
     background-position--> right top.
     background (shorthand property) ---> Hace todos los demas juntos, vas poniendo los valores en orden y basta, no importa si faltan.
     opacity: puede tomar valores de 0 a 1 o 0 a 100%
+-----------------------------------------------------------------------------------------------------------------------------
+Normalizacion de estilos:
+    Los navegadores tienen efectos predeterminados llamados user agent styles, y cada navegador puede definir
+    el estilo como le pinte, por lo tanto, pueden cambiar cosas de nuestro css dependiendo navegadores, para
+    evitar esto, se normalizan, es decir, restablecer los estilos por defectos del nav, podes sacarlos de 
+    google si queres normalizar todo (necolas.github ---> Normalize) o podes hacerlo manualmente:
+    1er: Sacar margenes y rellenos por defectos, todo elemento lo suele tener, para normalizarlo de entrada
+    todo, usamos el selector universal * y hacemos: margenes, padding y boxsizing, toma el tamaño del elemento
+    , con border-box, si le pones el margen o relleno, el margen se hace hacia adentro de la caja, el contenido
+    queda mas adentro de la caja, mientras con context-box, es que si le cambias alguna de estas, cuando 
+    agregemos un margen, va a encajarlo fuera de la caja, aumentando su tamaño y espacio que ocupa, por tanto
+    si acomod algo, y cambio ese margen, me mueve todo, conclusion: border-box > context-box. Las pseudo clases
+    before o after ayudan (googlealo)
+    
+    *,
+    *::before
+    *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    2do
+    le saco el subtitulo a los enlaces, hago que en principio midan lo mismo, despues lo cambiare, 
+    lo mismo con el color, inherit toma el heredado, en principio toma la del html.
+        a{
+            text-decoration: none;
+            font-size: 2px
+            color: inherit
+        }
+    
+    3ro
+    A las listas les saco los numeros para que no molesten en principo, despues se los encajo si quiero.
+    ul, ol {
+        list-style-type: none;
+    }
+    
+    4to
+    parrafos tamaños generico
+    p{
+        font-size: 1.8em;
+    }
+    
+    5to
+    html, etiqueta raiz, todos los estilos heredables que pongamos se encaja a todo, se le suele poner un 
+    valor de fontsize de 62.5% porque es una buena practica. Al hacer esto, las unidades de em se ponen en 
+    1.8 em, mas simple para los calculos.
+    html {
+        font-size: 62.5%
+        font-family: "laQuePinte"
+    }
+    
+    5to
+    
+    header,footer {
+        font-family: "OtraLetra"
+        Color: elQuePinte
+    }
+    
+    6to
+    creo una clase utilitaria, la que tenga esta clase va a evitar que se pase de los costado, y el margen al ser 0
+    auto, calcula automaticamente, y es una clase reutilizable.
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 -----------------------------------------------------------------------------------------------------------------------------
 Borders-stlye:
     dotted - Defines a dotted border
@@ -143,6 +213,7 @@ Borders-stlye:
     border-radius: 1 valor solo hace las 4 iguales, creo.
 -----------------------------------------------------------------------------------------------------------------------------
 Agregar Fuentes:
+    Forma cheta, import@link de google fonts.
    2 formas: (con google fonts.com)
     online: vas a la pagina, copias el link cuando elegis una de las letras, metes eso en el head de tu html, y despues
     usas el nombre de la letra para llamarla cuando quieras.
@@ -308,9 +379,225 @@ Grid,Evolución del flex:
 
     Se pueden poner muchas media-querie a un mismo elemento, y a cada una la condicion que pinte.
 -----------------------------------------------------------------------------------------------------------------------------
+DOM
+	Conexion de javascript con HTML.
+	Documento object model es la representacion que hace el navegador de los elementos de 
+	un documento html. Esto nos permite navegar con javascript a traves de esta estructura
+	en forma de arbol. 
+	Nodos:
+	El dom es un arbol de elementos donde cada elemento es un NODO, pueden ser etiquetas,
+	atributos, texto, comentarios o el mismo document, que es el NODO principal del DOM.
+	Se abre como una especie de arbol, sale del document y baja a root element, que es el html 
+	y asi.
+	
+	Tipos de NODOS:
+	document: representa el nodo raiz (es un objeto)
+	attr: representa el atributo de un elemento
+	comment: nodos de comentario
+	element:representa una equitqueta html
+	
+	
+	Representacion del DOM: (hay una imagen), pero digamos que es como cuando estas en 
+	los ajustes de nvidia, que tocas una carpeta y abre para abajo lo que tenga, es igual.
+	
+	acceso al dom:
+	javascript nos provee METODOS NATIVOS para acceder a los distintos nodos y sus props,
+	
+	getElementByld("blog"): trae el nodo con el elemento id blog
+	querySelector("li") ---> busca bien que hace en el apunte de DOM, pero lo que mostro es 
+	que poniendo dentro li, mostraba los li del documento como un array. El querySelector funca
+	con todos los selectores de css, y es mas comodo porq si tenes cosas super especificadas, 
+	es como usar el mismo nombre pa buscarlo.
+	
+	Acceso al DOM: podes seleccionar un elemento con los getElemento o querySelector.
+	Al hacer eso, podes guardar elementos y guardarlos en una variable para poder 
+	trabajar con ellos.
+	
+	let prueba = document.querySelector("li"), asi guardaste al primer li del html que tengas.
+	entonces podes cambiair cosas como el color asi:
+	prueba.style.color = "blue" , eso cambio el color de ese li
+	
+	Modificar DOM: MUY IMPORTANTE, ACA ES COMO PODES CAMBIAR COSAS DEL HTML.
+	podes crear elementos y nodos, primero un nodo de etiqueta, y despues....
+	creatElement("div")
+	padre.appendChild(hijo)
+	crearTextNode("hola mundo")
+	
+	Eventos:
+	Son acciones que suceden en el navegador, que afectan directamente a los elementos del DOM
+	que podes detectar a traves de distintos metodos de javascript, aca se suelen usar callbacks
+	, como si el usuario hizo click a alguna lado, tal cosa.
+	
+	Event handlers: Manejadores de eventos:
+	son los metodos que existen para reaccionar frente a tdistintos eventos que se produzcan en
+	el navegador:
+	node.addEventListener("eventType",callback) utilizamos el metodo de addEventListener 
+	sobre el nodo y pasamos el tipo de evento y una funcion de callback como parametros.
+	
+	node.eventType = () => {callback} Accedemos al metodo del tipo de evento del nodo
+	seleccionado y le asignamos una funcion a ejecutar cuando se realice el evento.
+	
+	hay una mas para meterlo en html, pero es muy mala idea.
+	
+	Event Types: Hay un millon. 
+	mouse.evento--> buscalos todos en w3school.
+	keyboard eventos --> ||   ||    ||   ||
+	
+	
+	const listTemporalTareas = document.querySelectorAll("li:not([style ]))
+-----------------------------------------------------------------------------------------------------------------------------
+Asincronismo
+Un pedido de un proceso o ejecucion de algo que no es ejecutado instantaneamente cuando se lee,
+digamos que son funciones que pasan cuando se cumplen ciertas condiciones, como pueden ser eventos
+o llegada de cosas especificas, como pedir a otra compu, programa o servidor, y no vamos a saber
+cuanto tiempo le va a tomar que eso que pedimos llegue, cuando estamos en asinctrono, por el 
+unico hilo de ejecucion, si alguna sentencia bloquea el hilo, todo lo demas que esten abajo
+o "detras" se demora, bloqueando la ejecucion del programa.
+JavaScript dispone de un solo hilo de ejecución (single thread), por lo que es fácil que 
+se generen bloqueos. Cuando una operación es bloqueante, no puede ejecutarse  más de una 
+tarea al mismo tiempo o en paralelo. Javascript posee la capacidad de manejar procesos 
+bloqueantes.
+
+ejecucion sincrona, lo ejecuta, toma tiempo que consiga la respuesta, y la devuelve, todo en 
+orden y no podes pasar a otra orden en el proceso. Entonces, si fuese una suma de tiempo, 
+el tiempo va a ser el total de todas las funciones una despues de otra, 1 funcion, 1 tiempo.
+
+ejecion asincrona: La ejecución de nuestro programa es dinámica. Cuando definimos un proceso
+ asíncrono, el programa sigue su camino hasta que es avisado que un proceso anterior ha 
+ finalizado. Capturamos el resultado y lo utilizamos, sin bloquear la ejecución de nuestro código
+ Entonces, si fuese una suma de tiempo, suma lo que sea sincrono, y el pedido asincrono, lo busca
+ al mismo tiempo, y cuando llegue lo encaja como queres, entonces, basicamente, busca al mismo
+ tiempo que lee el resto del codigo, por lo que toma menos, la respuesta llega cuando este lista
+ no esperas a que lo cargue para cargar lo demas.
+
+ Asincronía en Javascript
+CallStack
+Apila las tareas a ejecutar a medidam que va leyendo el código. Si una tarea posee otra
+ tarea dentro estas entran en orden ascendente y se resuelven en orden descendente.
+
+Event Loop
+Recibe tareas asíncronas, las envía a la cola de tareas (callback queue) y las devuelve al 
+callstack una vez resueltas.
+
+setTimeOut(): Es una función nativa que nos permite generar un delay (retraso) en la ejecución
+de un proceso de nuestro programa.
+Recibe como primer parámetro una función a
+ejecutar y como segundo, el tiempo que debe
+transcurrir para que eso suceda expresado en
+milisegundos.
+
+setTimeOut(callback.ms)
+
+setTimeOut(() => {
+    console.log("holamundo");
+}, 1000ms)
 
 
+También podemos utilizar clearTimeOut()
+para cancelar el retraso producido por
+esta función. Podes ponerle un evento al timeOut.
 
+setInterval()
+Similar a la anterior, pero en este caso nos
+permite ejecutar una función cada
+determinado bloque de tiempo.
+Recibe como primer parámetro una función a
+ejecutar y como segundo, cada cuanto tiempo
+debe repetirse su ejecución.
+Utilizando clearInterval() cortamos la
+ejecución del proceso.
+
+Ahora con los temporizadores, vamos a hacer que un callback se demore lo que tenga que demorar
+sea el tiempo que sea, por eso lo vamos a escribir de la siguiente forma: Promesas:
+
+Promesas
+Promesa de que va a ser completada en un futuro.
+Programamos que vamos a pedir y que pase una vez llegue la respuesta.
+
+Si bien la forma primitiva de manejar procesos
+asíncronos en Javascript son los callbacks, hoy en día
+ya no se utilizan como tal, sino que en su lugar se
+encuentran las promesas.
+Una promesa es algo que, en principio pensamos que
+se cumplirá, pero en el futuro pueden ocurrir varias
+cosas.
+
+Pending: Apenas pedida la promesa, entra en este estado.
+La promesa se queda en un estado incierto
+indefinidamente (promesa pendiente)
+
+Fullfilled: Devuelve un resultado, no necesariamente lo que quieras, pero devuelve algo.
+Por ejemplo, pedis un ID, y te dice que no esta el id, eso es una respuesta.
+La promesa se cumple por ende, queda
+resuelta y devuelve el resultado.
+
+Rejected: No hay respuesta como tal, no te volvio nada.
+La promesa no se cumple, lo que significa
+que fue rechazada y arrojará un error.
+
+Crear una promsesa: se usa el obejto promise que recibe dos parametros, necesita la palabra 
+new porque se trata de un objeto. Si tenemos una función donde sabemos que la respuesta de su
+ejecución puede no
+ser inmediata, necesitamos retornar una
+promesa.
+En este caso, como nuestra función
+demora 4 segundos en devolver el texto, es
+necesario crear una promesa.
+
+Si intentamos ejecutar nuestra función e
+imprimir el valor por consola, nos
+encontraremos con un problema.
+
+Esto sucede porque el console.log() intenta
+imprimir el resultado de esperar() de
+inmediato, en lugar de esperar los 4
+segundos.
+
+Manejo de Resultados
+Para poder manejar el resultado de una
+promesa debemos hacer uso de 3
+métodos especiales.
+Ellos son:
+.then(): que recibe como parámetro el
+resultado de nuestra promesa. Captura la respuesta de la promesa que viene cuando sea.
+
+.catch(): que recibe como parámetro el
+error en caso que sea rechazada.
+.finally(): recibe un callback que se
+ejecutará aunque la promesa falle o se
+
+Async/Await : Esta es una nueva sintaxis que nos permite trabajar
+con nuestras promesas evitando seguir una
+metodología tan estructurada.
+Para eso utilizaremos las palabras reservadas async y
+await.
+
+Manejo de errores con try/catch
+Antes de ver async/await es importante
+conocer el bloque try/catch para el
+manejo de errores en nuestro código.
+Si bien, este bloque no es exclusivo del
+asincronismo se utiliza muy seguido en
+estos casos.
+Con try/catch le vamos a indicar a nuestro
+programa que debe “intentar” ejecutar el
+código dentro del try pero en caso de fallar
+debe devolver la respuesta dentro del
+catch.
+
+try preejecuta el bloque a ver si hay algun error dentro del bloque, si hay alguno, le manda ese
+error al catch
+
+Nuestra función esperar() devuelve una
+promesa, por lo tanto mediante las palabras
+reservadas async/await reemplazamos el
+uso de los métodos .then() y .catch().
+
+Trabajar con promesas nos permite manipular los procesos asíncronos de nuestro
+código.
+Siempre que tengamos un proceso que devuelva una promesa podemos utilizar
+las siguientes 2 variantes para manipular su resultado:
+then/catch/finally async/await + try/catch
 
 
 
