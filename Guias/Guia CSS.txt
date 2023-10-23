@@ -108,10 +108,9 @@ Selectores:
     ::selection p::selection	Selects the portion of an element that is selected by a user
 -----------------------------------------------------------------------------------------------------------------------------
 Nombrado de clases:
-BEM, block-element-modifier, tenes un bloque, le pones una clase y a los hijos del 
-bloque le pones la clase del bloque mas el nombre del element:
-<nav class="navbar"> <ul class="navbar__menu"> <a class="navbar__link">
-
+    BEM, block-element-modifier, tenes un bloque, le pones una clase y a los hijos del 
+    bloque le pones la clase del bloque mas el nombre del element:
+    <nav class="navbar"> <ul class="navbar__menu"> <a class="navbar__link">
 -----------------------------------------------------------------------------------------------------------------------------
 background:
     background-color
