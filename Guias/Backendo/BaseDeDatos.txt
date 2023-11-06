@@ -249,7 +249,16 @@ relacionados de distintas tablas. Es un select complejo.
  Podes ver cada tabla como un conjunto, y con joins podes elegir que datos que esten en cada 
  tabla queres ver.
 
- SELEC
+ SELECT empleados.apellido, salarios.salarios FROM empleados INNER JOIN salarios ON salarios.id_empleados = empleados.id
+
+Selecciona de la tabla empleados el apellido, de la tabla salario, el salario, y para le join, INNER JOIN
+es la interseccion de los conjuntos A y B, FROM empleados es la tabla A, INNER JOIN salarios es la tabla B,
+ON es cuando se cumpla la condicion de que los id_empleados sean = a los empleados id, que siempre dara resultado.
+El ON especifica las condiciones del join. Despues hay mas joins que podes googlear.
+
+Despues podes poner un select bien especifico de todo lo que quieras, y asi vas especificando.
+
+
 
 
 

@@ -1,0 +1,331 @@
+NodeJS:
+Podes probar algunas cosas en Replit.
+Es un entorno de ejecución para JavaScript orientado a
+eventos asíncronos diseñado para crear aplicaciones
+web escalables, construido con V8, el motor de
+JavaScript de Chrome, escrito en C, C++ y JavaScript.
+Nos permite desarrollar con el lenguaje Javascript
+más allá del navegador.
+
+¿Es NODE JS un lenguaje de programación?
+Es un programa escrito en Js para que lo que escribas
+se comunique con un servidor, operacines, etc. Lee
+el archivo y lo traduce al servidor. Lo ejecuta
+fuera del navegador.
+En una palabra: NO.
+NODE es un entorno de ejecución
+que se utiliza para ejecutar
+JavaScript fuera del navegador.
+
+Tampoco es un framework
+El tiempo de ejecución de NODE se construye
+sobre un lenguaje de programación -en este
+caso, JavaScript- y ayuda a la ejecución de los
+propios frameworks.
+En resumen, NODE no es un lenguaje de programación ni un marco de
+trabajo, es un entorno para ellos.
+
+Arquitectura de Node:
+NODE utiliza la arquitectura “Single
+Threaded Event Loop” para manejar
+múltiples clientes al mismo tiempo, a
+diferencia de los clientes concurrentes
+multihilo en lenguajes como Java.
+
+Single Thread VS Multi Thread
+
+SINGLE THREAD
+1. Mantiene un pool de hilos limitado para atender las
+peticiones.
+2. Cada vez que llega una solicitud, la coloca en una cola.
+3. El Event Loop espera las peticiones indefinidamente.
+4. Cuando llega una solicitud, el bucle la recoge de la cola y
+comprueba si requiere una operación de entrada/salida (E/S)
+de bloqueo. Si no es así, procesa la solicitud y envía una
+respuesta.
+5. Si la solicitud tiene una operación de bloqueo que realizar, el
+bucle de eventos asigna un hilo del pool de hilos internos
+para procesar la solicitud. Los hilos internos disponibles son
+limitados.
+6. El Event Loop rastrea las solicitudes que se bloquean y las
+coloca en la cola una vez que se procesa la tarea que se
+bloquea. Así es como mantiene su naturaleza no bloqueante.
+
+MULTITHREAD
+En un modelo de solicitud-respuesta multihilo,
+varios clientes envían una solicitud y el servidor
+procesa cada una de ellas antes de devolver la
+respuesta.
+Sin embargo, se utilizan múltiples hilos para
+procesar las llamadas concurrentes. Estos hilos
+se definen en un pool de hilos, y cada vez que
+llega una petición, se asigna un hilo individual
+
+Arquitectura Node JS
+Dado que NODE utiliza menos hilos, utiliza menos recursos/memoria, lo que resulta en una ejecución
+más rápida de las tareas. Así que para nuestros propósitos, esta arquitectura de un solo hilo es
+equivalente a la arquitectura multihilo.
+Cuando uno necesita procesar tareas con muchos datos, entonces tiene mucho más sentido utilizar
+lenguajes multihilo como Java. Pero para aplicaciones en tiempo real, Node.js es la opción obvia
+
+USOS COMUNES DE NODE JS
+
+Aplicaciones de una sola página (SPA):
+El Event Loop de Node.js viene al rescate
+aquí, ya que procesa las solicitudes de
+forma no bloqueante permitiendo tener
+peticiones para componentes específicos.
+
+Aplicaciones basadas en REST API:
+JavaScript se utiliza tanto en el frontend
+como en el backend de los sitios. Así, un
+servidor puede comunicarse fácilmente
+con el frontend a través de APIs REST
+utilizando Node.js
+
+Chats en tiempo real:
+Debido a su naturaleza asíncrona de un
+solo hilo, es muy adecuado para procesar
+la comunicación en tiempo real. Se puede
+escalar fácilmente y se utiliza a menudo
+en la construcción de chatbots.
+
+Streaming de datos:
+Empresas como Netflix utilizan
+NODE para el streaming, esto se
+debe principalmente a que NODE
+es ligero y rápido.
+
+Inicios de node: 
+Cuando inicias su consola de comandos, estas en el 
+backend en principio, si escribis la palabra
+node --> Te metes a la app como tal.
+.exit --> Te saca de la app.
+console.log("mensaje") --> imprime "mensaje" en terminal.
+
+Para ejecutar un archivo de js en Node, tenes que ir 
+a la carpeta donde esta ese archivo, lo mas facil 
+es ir a la carpeta en cuestion y hacer click derecho
+terminal. Asi abriste la terminal en esa carpeta, 
+y despues tenes que iniciar el node con el archivo
+js que queres, asi que dentro de la terminal pones 
+node nombre.js ---> sin comillas ni nada, el nombre
+del archivo como esta en la carpeta con .js, asi 
+abriste el node en el archivo.
+
+Orden:
+Modulos: archivos con funciones.
+Libreria: Conjunto de modulos.
+Paquetes: Conjunto de librerias.
+Frameworks: Conjuntos de librerias, modulos y paquetes con 
+sus propias reglas. Aunque tambien suelen estar dentro de 
+paquetes.
+
+Modularizacion: Basicamente haces funciones en otros archivos 
+y los podes usar dentro de otros archivos llamandolos.
+Uno de los problemas de Javascript desde sus inicios es organizar
+de una forma adecuada una aplicación grande, con muchas líneas
+de código.
+Tener todo el código en un sólo archivo Javascript es confuso y
+complejo.
+La solución a ese problema fueron los módulos, que permiten
+separar nuestro código sin tener que vincular una etiqueta script
+por cada archivo de Javascript en nuestro proyecto.
+
+Historia de los módulos:
+El precursor para esta solución fue NodeJS quién creó el sistema de módulos conocido
+como CommonJS.
+Sin embargo, a partir de la especificación EcmaScript 2015 se introduce al lenguaje una
+alternativa nativa conocida como ES Modules.
+Ambos tienen su propia sintaxis y si bien no es común verlos en proyectos con Javascript
+puro, son muy usados en el Frontend en Frameworks como React o en desarrollos backend
+realizados con NodeJS.
+
+Tipos de modulos en Node:
+Nativos
+Son módulos que vienen
+incluidos dentro del código
+fuente de NODE.
+
+Internos: Suelen ser hechos por nosotros.
+Todos los módulos creados durante
+el desarrollo del proyecto y que
+hacen a nuestra aplicación.
+
+Externos o de terceros
+Librerías creadas por terceros y
+puestas a disposición a través de
+gestores de paquetes de NODE
+como NPM o YARN.
+
+Gestores de Paquetes: Bibliotecas
+Los package manager más conocidos para NODE son NPM y YARN.
+Estos sirven como bibliotecas que contienen módulos de terceros con
+soluciones sencillas a problemas comunes y a veces no tan comunes.
+Con ellos podemos instalar librerías de código que nos ayuden con
+tareas simples como animaciones, alertas o trabajo con fechas, sin
+embargo también podemos usarlo para descargar frameworks como
+React o Angular.
+
+NPM: Librerias de paquetes y hace un json con
+dependencias.
+Node Package Manager es el gestor de
+paquetes más conocido y utilizado.
+Se instala automáticamente cuando
+instalamos NODE por lo que no debemos
+instalar nada adicional.
+Para poder instalar dependencias o
+librerías en nuestros proyectos primero hay
+que utilizar el comando NPM init o NPM
+init -y en la terminal para dar inicio a un
+proyecto de NODE gestionado por NPM.
+
+package.json: Para inciar npm en el proyecto te 
+metes a la terminal de node, que seria terminal -->
+node y ahi estas, y pones npm init -y --> si pones 
+esto sin el guion Y, entonces te va a decir que 
+elijas uno a uno los datos de abajo, nombre, version,
+etc.
+Al iniciar NPM en nuestro proyecto se crea
+un archivo llamado package.json.
+Este archivo será utilizado por el gestor de
+paquetes para listar nuestras dependencias
+a medida que las vayamos instalando y
+para guardar información general del
+proyecto como:
+- Nombre
+- Versión
+- Descripción
+- Autor
+- Licencia
+
+La propiedad main indica el archivo de
+“entrada” de nuestro proyecto mientras
+que la propiedad scripts nos permite crear
+comandos para ejecutar distintas acciones
+de nuestro código.
+
+Crear un servidor:
+backend file: Es un codigo que controla que información
+obtiene el usuario cuando accede a un servidor.
+¿Qué es un Servidor Web?
+
+Un servidor de software o Servidor Web HTTP controla cómo los usuarios
+de la web obtienen acceso a los archivos alojados en un servidor de
+hardware (una pc).
+Son capaces de comprender urls o solicitudes a través de ellas y dar una
+respuesta atendiendo dicha solicitud.
+Existen servidores estáticos y dinámicos.
+
+Tipos de servidores WEB
+
+Estático
+Consiste en una computadora
+(hardware) con un servidor HTTP
+(software).
+Se le dice "estático" porque envía los
+archivos que aloja "tal como se
+encuentran" (sin modificarlos) a tu
+navegador
+
+Dinámico
+Consiste en un servidor web estático
+con software adicional, como una
+aplicación de servidor y una base de
+datos.
+Se le dice "dinámico" a este servidor
+porque la aplicación actualiza los
+archivos alojados, antes de enviar el
+contenido a tu navegador mediante el
+servidor HTTP.
+
+Servidor Estático Nativo
+Para poder montar nuestro servidor,
+debemos tener un archivo de entrada o
+“entry point” donde realicemos la
+configuración inicial de nuestro Server.
+Creamos nuestro entry point llamado:
+app.js
+Luego importamos el módulo http
+nativo y creamos un servidor con el
+método:
+.createServer();
+
+Cada llamada a nuestro server recibe 2
+parámetros super importantes: require
+y response, que contienen toda la
+información tanto de la solicitud como
+de la respuesta en ese orden.
+Finalmente escribimos una cabecera
+mediante .writeHead(); indicando el
+tipo de contenido que vamos a devolver
+y lo enviamos. Hasta ahore tenes esto:
+
+const server = http.createServer((req, res) => {
+	res.writeHead(200, {
+		"Content-Type" : "text/plain"
+	})
+res.end("hola mundo")
+})
+
+
+Ya casi lo tenemos, ahora solo nos queda
+escuchar a un puerto para poder realizar
+llamadas a nuestro servidor.
+Para eso usamos el método .listen();
+el cual trabaja sobre nuestra constante
+server y recibe el puerto como primer
+parámetro y un callback en segundo.
+Seria agregar eso:
+
+server.listen(3000, () => console.log("servidor corriendo en localhost:3000"))
+
+
+¡Listo!
+Ahora pongamos a correr nuestro
+servidor desde la terminal mediante
+el comando node app.js y
+accedemos a él desde el navegador
+
+Enviando HTML:
+
+Modificamos ligeramente la
+cabecera Content-Type, cambiamos el text/plain
+por text/html; charset=utf-8 
+y en la respuesta cuando abris el servidor, 
+ponelo entre etiquetas de html h1 para texto.
+
+Intentemos con un archivo
+.html: Con lo de antes, mandas codigo html dentro de 
+de la parte donde escribis, pero tendrias que hacer todo
+el html ahi, ahora vamos a usar otro modulo que nos permite
+comunicarse con el gestor de archivos y lee y carga un archivo 
+html.
+
+Leyendo archivos con FileSystem
+FileSystem es un módulo nativo de node que nos permite trabajar con archivos que
+existan en la PC o servidor.
+Veamos cómo utilizarlo para devolver un archivo HTML como respuesta
+readFileSync(); lee un
+archivo de forma síncrona
+(bloqueante) y luego lo
+devolvemos como respuesta a
+la petición.
+
+const server = http.createServer((req, res) => {
+	const file = fs.readFileSync(__dirname + "/Index.html")
+	res.writeHead(200, {
+		"Content-Type" : "text/html"
+	})
+res.end(file)
+})
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,303 @@
+Intro al backend:
+Es todo lo que pasa del lado del servidor, se encarga de la logica para que una pagina Web funque. Son el conjunto 
+de acciones que pasan en una web pero que no vemos, por ejemplo la consulta a BBDD y posterior envio al cliente.
+-Acciones logicas.
+-Desarrollo de funciones que simplifiquen el proceso de desarrollo.
+-Conexion con BBDD.
+-Uso de librerias del servidor Web (como implementar cache o pa comprimir las imagenes web)
+
+Comunicacion: Flujo cliente/servidor
+Es una relación en la cual un programa (el cliente) solicita un servicio o recurso de otro programa (el servidor). Este
+esquema refleja el flujo de información entre uno o varios dispositivos con un servidor web.
+
+Cliente: Envia la peticion y espera las respuestas:
+
+●Envía una petición al servidor y se queda esperando por una respuesta.
+● Una vez que son servidas sus solicitudes, termina el trabajo.
+● Un cliente accede a un servidor y recupera servicios especiales o datos de él.
+
+Es tarea del cliente estandarizar las solicitudes, transmitirlas al servidor y procesar los datos obtenidos para que 
+puedan visualizarse en un dispositivo de salida como una pantalla.
+
+Servidor: Es un programa que ofrece un servicio que se puede obtener en una Red:
+
+● Acepta la petición desde la red, realiza el servicio y devuelve el resultado al solicitante.
+● El servidor comienza su ejecución antes de comenzar la interacción con el cliente.
+● Su tiempo de vida o de interacción es “interminable”, una vez comienza a correr, se queda esperando las solicitudes que
+pudieran llegar desde los diversos clientes.
+
+Request/Response: Ambos en HTTP.
+
+REQUEST Son las solicitudes o peticiones que hacemos a través del navegador (el cliente) a un servidor.
+
+RESPONSE El servidor recibe nuestra solicitud, la procesa y envía como resultado una respuesta al cliente (navegador).
+
+Protocolo HTTP:
+
+HTTP o Hyper Text Transfer Protocol es el nombre de un protocolo que nos permite realizar una petición de datos
+y recursos, como pueden ser documentos HTML. Es la base de cualquier intercambio de datos en la web para la comunicación
+de un cliente con un servidor.
+
+Manejo de información
+HTTP es un protocolo sin estado, por lo que no guarda ninguna información sobre conexiones anteriores.
+El desarrollo de aplicaciones web necesita frecuentemente mantener estado, por ejemplo, para el uso de "CARRITOS 
+de compra" en páginas de comercio electrónico. Para esto se usan las cookies, que es  información que un servidor puede 
+almacenar en el sistema cliente.
+
+IDENTIFICACIÓN DE RECURSOS WEB
+El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos) y dicho recurso, no posee un tipo definido
+por defecto; puede ser un documento, o una foto, o cualquier otra posibilidad.
+
+Una URI (identificador de recursos uniformes) es un bloque de texto que se escribe en la barra de direcciones de un
+navegador web y está compuesto por dos partes: la URL y la URN.
+
+Cada recurso es identificado por un Identificador Uniforme de Recursos (URI) y es utilizado a través de HTTP, para la
+identificación del tipo de recurso.
+
+URI: URL + URN:
+URL
+Uniform resource locator se utiliza para indicar dónde se encuentra un recurso. Por lo tanto, también sirve
+para acceder a algunas páginas web por Internet.
+
+URN
+Uniform resource name es independiente de la ubicación y designa un recurso de forma permanente.
+
+● scheme (esquema): proporciona información sobre el protocolo utilizado.
+● authority (autoridad): identifica el dominio.
+● path (ruta): muestra la ruta exacta al recurso.
+● query (consulta): representa la acción de consulta.
+● fragment (fragmento): designa una parte del recurso principal.
+
+https://john.dow@www.example.com:123/forum/questions/?tag=networking&order=newesthastagtop.
+
+En este caso, https es el scheme.
+john..... hasta 123 es la authority.
+forum questions es el path.
+tag=.... es el query 
+top es el fragment.
+
+FASES HTTP
+En los protocolos basados en el modelo cliente-servidor, como es el caso del HTTP, una sesión consta de tres fases:
+●El cliente manda su petición, y espera por la respuesta.
+●El cliente establece una conexión TCP.
+●El servidor procesa la petición, y responde con un código de estado y los datos correspondientes.
+
+HTTP HEADERS
+Las cabeceras (en inglés headers) HTTP permiten al cliente y al servidor enviar información adicional junto a una
+petición o respuesta.
+● Headers generales, (General headers), como Via (en-US), afectan al mensaje como una unidad completa.
+● Headers de petición, (Request headers), como User-Agent, Accept-Type, modifican la petición especificando con
+mayor detalle ( como: Accept-Language (en-US), o dándole un contexto, como: Referer, o restringiéndola
+condicionalmente, como: If-None).
+● Headers de entidad, (Entity headers'), cómo Content-Length las cuales se aplican al cuerpo de la petición. Por
+supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('body' en inglés).
+
+HTTP BODY
+La última parte del mensaje de respuesta es el body.
+No siempre se envía o se recibe uno y se utiliza para enviar información desde un cliente (navegador) o para recibirla 
+desde el servidor.
+Para ello se utiliza el METHOD HTTP conocido como POST que manipula la información en el cuerpo del mensaje a
+diferencia del método GET que lo hace directamente en la URL a través de los query params.
+
+HTTP METHODS
+HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar
+para un recurso determinado. Estos métodos son utilizados principalmente en la creación
+de servicios REST.
+
+GET: Leer informacion  
+POST: Enviar/Solicitar/Crear informacion.
+DELETE: Elimniar informacion.
+PUT: Reemplazar informacion.
+PATCH: Modificar/Actualizar informacion.
+
+HTTP STATUS CODES
+Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente
+una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
+100: Respuestas informativas (100-199)
+200: Respuesta satisfactoria (200-299)
+300: Redirecciones (300-399)
+400: Errores de los clientes (400-499)
+500: Errores de los servidores (500-599)
+
+Hay algunos muy comunes como el 404, el servidor no pudo encontrar el contenido solicitado.
+
+Patrones de arquitectura:
+
+Es una solucion para realizar proyectos, son patrones utilizados para resolver problemas
+comunes de diseño y permiten a los desarrolladores contruir software escalable y robusto,
+basicamente un metodo de produccion que mantiene un desarrollo estable que funcione a 
+largo plazo, tu logica y manejo de datos.
+
+Tipos de patrones:
+
+Capas, que vamos a usar, MVC:Capas
+Dividen el software en capas, cada una con una
+responsabilidad específica. Ejemplos de patrones
+de capas son: MVC (Modelo-Vista-Controlador) y
+MVP (Modelo-Vista-Presentador)
+
+Basados en eventos
+Se centran en el intercambio de mensajes o
+eventos entre componentes. Ejemplos de
+patrones de eventos son: Publicar-Suscribir,
+Observer y Reactor.
+
+Basados en servicios:
+Se enfocan en la creación de servicios
+reutilizables. Por ejemplo: Arquitectura SOA
+(Orientada a Servicios) y REST (Representational
+State Transfer).
+
+Basados en microservicios
+Se enfocan en la creación de una arquitectura
+compuesta por servicios independientes que
+trabajan juntos para realizar una tarea. Algunos
+ejemplos son: Microservicios y Arquitectura
+Hexagonal.
+
+MVC: 
+Es una arquitectura de software
+que propone la división de
+responsabilidades de una
+aplicación en 3 capas diferentes.
+
+MVC es útil en sistemas donde se requiere el uso de
+interfaces de usuario, aunque en la práctica el mismo
+patrón de arquitectura se puede utilizar para distintos
+tipos de aplicaciones.
+Ayuda a crear softwares más robustos, donde se
+potencie la facilidad de mantenimiento, reutilización
+del código y la separación de conceptos.
+
+Una estructura MVC básica está compuesta por
+al menos 3 carpetas y un entry point.
+En la imagen podemos observar el archivo
+app.js cómo entry point y las carpetas data
+(modelo), views (vista), controller (controlador).
+Además se pueden tener otras carpetas para las
+rutas, estilos y middlewares que veremos más
+adelante. (hay una imagen de como se deberian
+ordenar los archivos dentro del vs)
+
+Modelo: Trabaja con la manipulacion de datos, aca
+se manejan todos los comandos de SQL, los selects,
+updates, insert, etc.
+
+Con NodeJS se suele usar Sequelize, un programa
+ORM que facilita trabajr con BBDD relacionales.
+
+Vista: Capa visible. Es el código HTML, CSS, 
+Javascript necesario para renderizar y mostrar 
+los datos e información a nuestros usuarios.
+En ocasiones se suelen utilizar
+Template Engines o diversos
+frameworks como React para adoptar
+flexibilidad en el desarrollo
+Normalmente es la capa Front End de
+los proyectos y su comunicación hacia
+las fuentes de datos se realiza a través
+de los controladores
+
+Controlador: Es el enlace entre vista y modelo.
+Su responsabilidad no es manipular
+directamente datos, ni mostrar ningún
+tipo de salida.
+Es invocado por nuestras rutas, solicita
+datos al modelo y los envía a la vista
+para ser renderizados.
+Normalmente contienen la lógica de
+nuestra aplicación junto con las
+condiciones o reglas de negocio.
+
+Recorrido MVC:
+El usuario realiza una solicitud a nuestro servidor.
+El router invoca un controlador.
+El controlador solicita información al modelo y este a
+la base de datos, devuelve al controlador y retorna
+los datos a la vista.
+La vista crea un archivo estático y se envía al cliente.
+El cliente recibe los archivos y renderiza la aplicación.
+
+API Rest:
+Las API interactúan con sistemas o PC 's de manera que el
+sistema comprenda la solicitud y la cumpla.
+REST no es un protocolo ni un estándar, sino un conjunto
+de límites de arquitectura.
+La información se entrega por medio de HTTP en uno de
+estos formatos: JSON (JavaScript Object Notation), HTML,
+XLT, Python, PHP o texto sin formato.
+
+Principios REST
+REST se enfoca en exponer recursos a través de URLs y
+utilizar los verbos HTTP (GET, POST, PUT, DELETE) para
+manipularlos.
+Se basa en la utilización de los verbos HTTP para realizar
+operaciones sobre los recursos, y en la utilización de los
+formatos JSON o XML para representar la información.
+Además propone un conjunto de restricciones
+arquitectónicas, como la interfaz uniforme, el estado sin
+sesión, la cacheabilidad, la visibilidad y la escalabilidad,
+que permiten construir sistemas web flexibles y
+escalables.
+
+¿Qué necesito para crear una API Rest?:
+
+Definir los recursos:
+
+Identificar los recursos que se van a exponer en la API
+RESTful, como entidades de negocio o funciones
+específicas.
+
+
+Definir la estructura de la URL
+
+Utilizar URLs descriptivas para cada recurso, evitando
+utilizar verbos o adjetivos en la URL y separando los
+elementos con barras diagonales.
+
+
+Utilizar los códigos de estado HTTP
+
+Utilizar los códigos de estado HTTP para comunicar el resultado
+de la operación, como 200 para una solicitud exitosa o 404 para
+un recurso no encontrado.
+
+Utilizar el formato de datos correcto
+
+Utilizar el formato de datos adecuado para cada
+operación, como XML o JSON, y especificar el tipo de
+contenido en la cabecera HTTP
+
+
+Utilizar los verbos HTTP
+
+GET, POST, PUT, DELETE, etc. En base a la
+intención para manipular los recursos. Cómo
+usar GET para obtener un recurso y POST para
+crear uno nuevo
+
+
+Utilizar la documentación
+
+Documentar la API RESTful para que los
+consumidores puedan entender cómo
+utilizarla y qué recursos están disponibles.
+
+
+Utilizar la autenticación y la autorización
+
+Proteger la API RESTful mediante la
+autenticación y la autorización de los
+usuarios que acceden a los recursos
+
+Hay una tabla dentro de la presentacion 23 de arquitectura
+que compara MVC con REST, fijate que onda.Si bien ambos patrones
+tienen sus principios y diferencias, es posible utilizarlos juntos.
+
+
+
+
+
+
+
+

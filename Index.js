@@ -1,3 +1,25 @@
+const http = require("http")
+const fs = require("fs")
+
+const server = http.createServer((req, res) => {
+	const file = fs.readFileSync(__dirname + "/Index.html")
+	res.writeHead(200, {
+		"Content-Type" : "text/html"
+	})
+res.end(file)
+})
+
+server.listen(3000, () => console.log("servidor corriendo en localhost:3000"))
+
+
+
+
+
+
+
+
+
+
 console.log("Hola desde el archivo de JS")
 const pi = 3.1415
   
@@ -8,9 +30,6 @@ function sumar() {
 	 return resultado ;
  }
 
-
-
- 
 /* 
 if (confirm("Te gusta mi pagina") && nombre == "agus" || nombre == "Agus") {
 	alert("Hola master")
@@ -59,14 +78,14 @@ const Juan = new nuevoEstu("Juan", 9)
  // Esta es la funcion para crear objetos moldes, van a tener esas propiedades, y despues creas la variable segun el estudiante nuevo que quieras
   // agregar, y asi podes hacer otra funcion que cree objetos con nombre.
 
-setTimeout(() => {
-	console.log("hola despues de 3 segundos")
+// etTimeout(() => {
+// 	console.log("hola despues de 3 segundos")
 
-}, 3000)
-setInterval(() => {
-	console.log("hola despues de 3 segundos")
+// }, 3000)
+// etInterval(() => {
+// 	console.log("hola despues de 3 segundos")
 
-}, 3000)
+// }, 3000)
 
 
 
